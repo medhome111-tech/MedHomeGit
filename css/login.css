@@ -2,130 +2,168 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#F0F0F0;
+    background:#ececec;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
 }
 
+/* Container principal */
 .container{
-    width:1416px;
-    height:717px;
-    display:flex;
-    box-shadow:0 8px 20px rgba(0,0,0,0.25);
-    border-radius:50px;
+    width:1200px;
+    height:580px;
+    background:#fff;
+    border-radius:30px;
     overflow:hidden;
+
+    display:flex;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.12);
 }
 
-/* Lado esquerdo */
+/* Painel Azul */
 .left{
     width:50%;
     background:#5260F7;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+
     color:white;
     text-align:center;
 }
 
 .left img{
-    width:274px;
-    height:284px;
+    width:180px;
+    height:auto;
     margin-bottom:20px;
 }
 
 .left h1{
-    font-size:50px;
-    font-weight:800;
-    margin-bottom:15px;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:8px;
 }
 
 .left p{
-    font-size:20px;
+    font-size:15px;
+    font-weight:400;
 }
 
-/* Lado direito */
+/* Painel Branco */
 .right{
     width:50%;
+    padding:70px 60px;
     background:white;
-    padding:80px 50px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 .right h2{
-    font-size:45px;
-    font-weight:800;
-    margin-bottom:15px;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:10px;
 }
 
 .subtitle{
-    font-size:17px;
-    margin-bottom:40px;
+    color:#555;
+    font-size:13px;
+    margin-bottom:25px;
 }
 
 .form-group{
-    margin-bottom:25px;
+    margin-bottom:18px;
 }
 
 .form-group label{
     display:block;
-    margin-bottom:10px;
-    font-size:17px;
+    font-size:13px;
+    margin-bottom:8px;
 }
 
 .form-group input{
     width:100%;
-    height:55px;
+    height:42px;
+
     border:none;
-    background:#F0F0F0;
-    border-radius:10px;
-    padding:0 20px;
-    font-size:16px;
+    outline:none;
+
+    background:#f0f0f0;
+
+    border-radius:6px;
+
+    padding:0 15px;
+    font-size:13px;
 }
 
+.form-group input::placeholder{
+    color:#9b9b9b;
+}
+
+/* Esqueceu senha */
 .forgot{
     text-align:right;
-    margin-top:10px;
+    margin-top:-5px;
+    margin-bottom:15px;
 }
 
 .forgot a{
+    color:#5260F7;
     text-decoration:none;
-    color:#605AFE;
-    font-weight:700;
+    font-size:12px;
+    font-weight:600;
 }
 
+/* Botão */
 .btn-login{
     width:100%;
-    height:50px;
+    height:40px;
+
     background:#5260F7;
     color:white;
+
     border:none;
-    border-radius:10px;
-    font-size:20px;
-    font-weight:700;
+    border-radius:6px;
+
+    font-size:14px;
+    font-weight:600;
+
     cursor:pointer;
-    margin-top:30px;
+    transition:.3s;
 }
 
+.btn-login:hover{
+    opacity:.9;
+}
+
+/* Cadastro */
 .register{
+    margin-top:18px;
     text-align:center;
-    margin-top:35px;
-    font-size:17px;
-    color:#868686;
+
+    font-size:12px;
+    color:#777;
 }
 
 .register a{
     color:#5260F7;
     text-decoration:none;
-    font-weight:700;
+    font-weight:600;
 }
 
-@media(max-width: 1200px){
+/* Responsivo */
+@media (max-width: 900px){
+
     .container{
         width:95%;
         height:auto;
@@ -135,19 +173,25 @@ body{
     .left,
     .right{
         width:100%;
-        padding:50px 30px;
+    }
+
+    .left{
+        padding:40px 20px;
+    }
+
+    .right{
+        padding:40px 25px;
     }
 
     .left img{
-        width:180px;
-        height:auto;
+        width:140px;
     }
 
     .left h1{
-        font-size:40px;
+        font-size:24px;
     }
 
     .right h2{
-        font-size:35px;
+        font-size:28px;
     }
 }
