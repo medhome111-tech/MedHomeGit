@@ -96,19 +96,29 @@ header{
     box-shadow:0 2px 6px rgba(0,0,0,.1);
 }
 
+/* ÍCONES DOS CARDS */
 .icone{
     width:70px;
     height:70px;
-    border-radius:10px;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     margin-bottom:15px;
 }
 
-.azul{
-    background:rgba(139,189,255,.4);
+.icone.azul{
+    background:#dbeafe;
 }
 
-.verde{
-    background:rgba(161,255,189,.4);
+.icone.verde{
+    background:#dcfce7;
+}
+
+.icone img{
+    width:35px;
+    height:35px;
+    object-fit:contain;
 }
 
 .card h3{
@@ -170,6 +180,16 @@ header{
     background:rgba(255,125,125,.4);
     border-radius:50%;
     margin:20px auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.circulo img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
 }
 
 .btn{
