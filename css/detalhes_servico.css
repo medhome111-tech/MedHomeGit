@@ -80,7 +80,7 @@ body {
  
 }
 
-.btn-mensagem {
+.btn-mensagem span{
    position: relative;
    top: -3PX;
 }
