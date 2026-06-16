@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Serviço</title>
+
+<link rel="stylesheet" href="css/cadastroserviço.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <a href="#" class="voltar">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <div class="card">
+
+        <h1>Cadastro de serviço</h1>
+        <p class="descricao">
+            Preencha as informações do serviço
+        </p>
+
+        <form>
+
+            <div class="grupo">
+                <label>Nome do serviço:</label>
+                <input type="text" placeholder="Insira o nome do serviço">
+            </div>
+
+            <div class="grupo">
+                <label>Categoria:</label>
+
+                <div class="select-box">
+                    <select>
+                        <option selected disabled>
+                            Selecione a categoria
+                        </option>
+                        <option>Enfermagem</option>
+                        <option>Fisioterapia</option>
+                        <option>Nutrição</option>
+                        <option>Cuidador</option>
+                    </select>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div class="grupo">
+                <label>Descrição:</label>
+
+                <textarea
+                placeholder="Insira uma descrição para o serviço"></textarea>
+            </div>
+
+            <div class="grupo data">
+                <label>Data de início:</label>
+                <input type="date">
+            </div>
+
+            <div class="paciente">
+
+                <h2>Dados do paciente</h2>
+
+                <p>
+                    Preencha as informações do paciente que será atendido
+                </p>
+
+                <div class="grupo">
+                    <label>Nome do paciente:</label>
+                    <input type="text"
+                    placeholder="Insira o nome do paciente">
+                </div>
+
+                <div class="grupo">
+                    <label>CPF:</label>
+                    <input type="text"
+                    placeholder="Insira o CPF do paciente">
+                </div>
+
+            </div>
+
+            <div class="acoes">
+
+                <button type="button" class="btn-cancelar">
+                    Cancelar
+                </button>
+
+                <button type="submit" class="btn-cadastrar">
+                    Cadastrar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
