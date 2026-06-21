@@ -1,0 +1,90 @@
+
+.titulo-area span img{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.paciente-info > img{
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+.dados-paciente p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dados-paciente p img{
+    width: 20px;
+    height: 20px;
+}
+
+
+.btn-azul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.btn-azul img{
+    width: 20px;
+    height: 20px;
+}
+
+.btn-azul img:last-child{
+    width: 14px;
+    height: 14px;
+}
+
+/* Ícone do card consulta */
+.titulo-card span{
+    width: 50px;
+    height: 50px;
+    background: #ffb4b4;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-card span img{
+    width: 28px;
+    height: 28px;
+}
+
+.titulo-prontuario{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-prontuario span img{
+    width: 40px;
+    height: 40px;
+}
+
+
+input{
+    width: 100%;
+}
+
+/* Textareas */
+textarea{
+    font-size: 15px;
+}
+
+
+button{
+    transition: .3s;
+}
+
+button:hover{
+    opacity: .9;
+    transform: translateY(-2px);
+}
