@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prontuário da Consulta</title>
+
+    <link rel="stylesheet" href="css/prontuario.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="titulo-area">
+            <span><img src="img/arrowleft.png" alt="Voltar"></span>
+
+            <div>
+                <h1>Prontuário da consulta</h1>
+                <p>Informações essenciais do paciente nessa consulta</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card paciente-card">
+
+            <div class="paciente-info">
+
+                <img src="img/idoso.png" alt="Paciente">
+
+                <div class="dados-paciente">
+                    <h2>Ademir de Souza</h2>
+
+                    <p>80 anos</p>
+
+                    <p>
+                        <img src="img/localizacao.png" alt="endereco">
+                        Rua Eurípedes de Aguiar, Nº41
+                    </p>
+
+                    <p>
+                        <img src="img/telefone.png" alt="Telefone">
+                        (11) 11111-1111
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="acoes-paciente">
+
+                <button class="btn-azul">
+                    <img src="img/agenda.png" alt="historico">
+                    Ver histórico de saúde
+                    <img src="img/seta.png" alt="seta">
+                </button>
+
+                <button class="btn-azul">
+                    <img src="img/agenda 2.png" alt="historico">
+                    Dados do paciente
+                    <img src="img/seta.png" alt="seta">
+                </button>
+
+            </div>
+
+        </section>
+        <section class="card">
+
+            <div class="cabecalho-card">
+
+                <div class="titulo-card">
+                    <span><img src="img/heart.png" alt="Consulta"></span>
+                    <h2>Informações da consulta</h2>
+                </div>
+
+                <button class="btn-azul">
+                    Ver mais detalhes
+                    <img src="img/seta.png" alt="seta">
+                </button>
+
+            </div>
+
+            <div class="consulta-grid">
+
+                <div>
+                    <label>Nome do serviço:</label>
+                    <p>Administração de medicação</p>
+                </div>
+
+                <div>
+                    <label>Paciente:</label>
+                    <p>Ademir de Souza</p>
+                </div>
+
+                <div>
+                    <label>Profissional:</label>
+                    <p>Ana Paula de Sousa</p>
+                </div>
+
+                <div>
+                    <label>Status:</label>
+                    <p class="status">Pendente</p>
+                </div>
+
+            </div>
+
+            <div class="botoes-check">
+
+                <button class="btn-checkin">
+                    Realizar check-in
+                </button>
+
+                <button class="btn-checkout">
+                    Realizar check-out
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="titulo-prontuario">
+
+                <span><img src="img/agenda 3.png" alt="Prontuário"></span>
+
+                <div>
+                    <h2>Prontuário médico</h2>
+                    <p>Preencha com as informações do atendimento</p>
+                </div>
+
+            </div>
+
+            <div class="linha-campos">
+
+                <div class="campo">
+                    <label>Pressão arterial:</label>
+                    <input type="text">
+                </div>
+
+                <span class="separador">-</span>
+
+                <div class="campo">
+                    <label>&nbsp;</label>
+                    <input type="text">
+                </div>
+
+                <div class="campo">
+                    <label>Temperatura (Cº):</label>
+                    <input type="text">
+                </div>
+
+                <div class="campo">
+                    <label>Frequência cardíaca:</label>
+                    <input type="text">
+                </div>
+
+            </div>
+
+            <div class="campo-textarea">
+
+                <label>Observações:</label>
+
+                <textarea placeholder="Anote observações dessa sessão da consulta"></textarea>
+
+            </div>
+
+            <div class="campo-textarea">
+
+                <label>Ações realizadas</label>
+
+                <textarea placeholder="Anote as ações realizadas no atendimento"></textarea>
+
+            </div>
+
+            <button class="btn-salvar">
+                Salvar prontuário
+            </button>
+
+            <div class="rodape-botoes">
+
+                <button class="btn-voltar">
+                    Voltar
+                </button>
+
+                <button class="btn-finalizar">
+                    Finalizar o atendimento
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
