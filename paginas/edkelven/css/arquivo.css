@@ -107,25 +107,4 @@
             background-color: #001bca;
         }
 
-        .btn:active {
-            transform: scale(0.98);
-        }
-
-        @media (max-width: 600px) {
-            .back-button {
-                top: 20px;
-                left: 20px;
-                width: 40px;
-                height: 40px;
-            }
-            
-            .card-container {
-                padding: 40px 20px;
-                margin-top: 40px;
-            }
-
-            .card-title {
-                font-size: 1.4rem;
-                margin-bottom: 35px;
-            }
-        }
+    
