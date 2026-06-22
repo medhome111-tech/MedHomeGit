@@ -16,9 +16,12 @@
             padding: 20px;
         }
         .titulo-area{
-   POSITION: absolute;
-            TOP: 40px;
-            LEFT: 100px; 
+           display: flex;
+           align-items: center;
+           gap: 20px;
+           POSITION: absolute;
+           TOP: 20px;
+           LEFT: 100px; 
 }
       
         .back-button {
