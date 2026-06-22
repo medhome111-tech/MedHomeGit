@@ -30,13 +30,12 @@
   
 </div>
 
-<button class="btn-login">
-    Entrar
-</button>
+<div class="btn-group">
+    <button class="btn-login" onclick="entrar()">Entrar</button>
+    <button class="btn-register" onclick="cadastrar()">Cadastrar-se</button>
+</div>
 
-<button class="btn-register">
-    Cadastrar-se
-</button>
+
 
 <!-- CARD 1 -->
 
@@ -88,3 +87,12 @@
 
 </body>
 </html>
+<script>
+function entrar() {
+    window.location.href = "login.html";
+}
+
+function cadastrar(){
+    window.location.href = "../alan/cadastropaciente.html"
+}
+</script>

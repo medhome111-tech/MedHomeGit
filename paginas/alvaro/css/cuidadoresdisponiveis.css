@@ -1,0 +1,331 @@
+/* =========================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-pagina: #F0F0F0;
+    --cor-texto-principal: #000000;
+    --cor-texto-secundario: rgba(0, 0, 0, 0.50);
+    --cor-azul-escuro: rgba(0, 4, 242, 0.94);
+    --cor-fundo-badge: #D6E3F6;
+    --cor-fundo-badge-titulos: #C1DBFB;
+    --cor-botao-azul: #147AFF;
+    --cor-botao-verde: #18A43D;
+    --borda-cinza: #D3D3D3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-pagina);
+    color: var(--cor-texto-principal);
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* =========================================
+   CABEÇALHO (TOPO)
+   ========================================= */
+.topo {
+    width: 100%;
+    height: 100px; /* Ajustado para um tamanho padrão de web */
+    background-color: white;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid #8D8D8D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo img {
+    height: 60px; /* Ajuste conforme o tamanho real da sua logo */
+}
+
+.localizacao-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.localizacao-topo .icone {
+    width: 51px;
+    height: 51px;
+}
+
+/* =========================================
+   CONTAINER PRINCIPAL
+   ========================================= */
+.container {
+    max-width: 1651px; /* Largura baseada no seu Figma */
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   BARRA DE PESQUISA E FILTROS
+   ========================================= */
+.pesquisa-secao {
+    margin-bottom: 40px;
+}
+
+.barra-pesquisa {
+    width: 100%;
+    height: 93px;
+    background: white;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    gap: 20px;
+}
+
+.icone-pesquisa {
+    width: 38px;
+    height: 38px;
+}
+
+.barra-pesquisa input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.barra-pesquisa input::placeholder {
+    color: rgba(0, 0, 0, 0.50);
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.filtro-btn {
+    height: 69px;
+    background: white;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    gap: 15px;
+    font-size: 22px;
+    color: var(--cor-texto-principal);
+    transition: 0.2s ease-in-out;
+}
+
+.filtro-btn:hover {
+    background: #f9f9f9;
+}
+
+.filtro-btn .icone {
+    width: 30px;
+    height: 30px;
+}
+
+.filtro-btn .icone-seta {
+    width: 19px;
+    height: 19px;
+    margin-left: 10px;
+}
+
+/* =========================================
+   CABEÇALHO DA LISTA DE PROFISSIONAIS
+   ========================================= */
+.cabecalho-lista {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.icone-grande {
+    width: 100px;
+    height: 100px;
+}
+
+.titulo-linha {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+.titulo-linha h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.badge-profissionais {
+    background: var(--cor-fundo-badge-titulos);
+    color: var(--cor-azul-escuro);
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.titulos p {
+    font-size: 22px;
+    color: var(--cor-texto-principal);
+}
+
+/* =========================================
+   CARDS DE CUIDADORES
+   ========================================= */
+.card {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--borda-cinza);
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    position: relative; /* Necessário para o botão de favorito absoluto */
+    gap: 40px;
+}
+
+.favorito {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid #DEDEDE;
+    font-size: 30px;
+    color: #8D8D8D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.favorito:hover {
+    color: red;
+    border-color: red;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Informações internas do card */
+.info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info h2 {
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.verificado {
+    background: var(--cor-fundo-badge);
+    color: var(--cor-azul-escuro);
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info p {
+    font-size: 22px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info p span {
+    color: var(--cor-texto-secundario);
+}
+
+.info p .icone {
+    width: 29px;
+    height: 29px;
+}
+
+.especialidade {
+    background: var(--bg-pagina);
+    color: var(--cor-azul-escuro);
+    font-size: 19px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    align-self: flex-start; /* Impede que estique por toda a div */
+    margin: 15px 0 25px 0;
+}
+
+/* Botões do Card */
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.botoes button {
+    flex: 1; /* Faz os botões dividirem o espaço igualmente */
+    height: 61px;
+    border-radius: 20px;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: opacity 0.2s;
+}
+
+.botoes button:hover {
+    opacity: 0.9;
+}
+
+.perfil {
+    background-color: var(--cor-botao-azul);
+}
+
+.contratar {
+    background-color: var(--cor-botao-verde);
+}
+
+.icone-btn {
+    width: 24px;
+    height: 24px;
+}
