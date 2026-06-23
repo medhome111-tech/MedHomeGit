@@ -110,3 +110,27 @@
         padding: 20px;
       }
     }
+
+
+
+    /* Adiciona a animação de pulso ao logo */
+.header img {
+    animation: pulsar 2s infinite ease-in-out;
+    border-radius: 50%; /* Ajuda a centralizar o efeito */
+}
+
+/* Define como a animação funciona */
+@keyframes pulsar {
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7); /* Cor azul suave inicial */
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(52, 152, 219, 0); /* Expande e desaparece */
+        transform: scale(1.05); /* Aumenta levemente o tamanho */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+        transform: scale(1);
+    }
+}

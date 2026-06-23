@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prontuários Registrados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/prontuariossalvos.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="header-title">
+            <a href="#" class="icon-circle" title="Voltar">
+                <img src="img/Arrow up.png" alt="Seta Voltar" class="icon-seta">
+            </a>
+            <div>
+                <h1>Prontuários registrados</h1>
+                <p>Visualize os prontuários registrados durante as consultas</p>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar paciente...">
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <aside class="sidebar-list">
+            <h2>Consultas registradas</h2>
+            
+            <div class="card active">
+                <h3>Maria Oliveira</h3>
+                <p class="professional">Profissional: Carlos Silva</p>
+                <p class="date">12/06/2026 - 14:00</p>
+                <span class="badge badge-success">Finalizado</span>
+            </div>
+
+            <div class="card">
+                <h3>José Pereira</h3>
+                <p class="professional">Profissional: Carlos Silva</p>
+                <p class="date">20/06/2026 - 10:00</p>
+                <span class="badge badge-success">Finalizado</span>
+            </div>
+
+            <div class="card">
+                <h3>Antonio Santos</h3>
+                <p class="professional">Profissional: Carlos Silva</p>
+                <p class="date">30/06/2026 - 16:00</p>
+                <span class="badge badge-success">Finalizado</span>
+            </div>
+        </aside>
+
+        <section class="details-panel">
+            <header class="details-header">
+                <h2>Detalhes do prontuário</h2>
+                <span class="badge badge-blue">Consulta encerrada</span>
+            </header>
+
+            <div class="info-grid">
+                <div class="info-box">
+                    <span class="label">Paciente</span>
+                    <span class="value">Maria de Oliveira</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">Profissional</span>
+                    <span class="value">Carlos Silva</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">Data</span>
+                    <span class="value">12/06/2026</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">Horário</span>
+                    <span class="value">14:00</span>
+                </div>
+            </div>
+
+            <div class="records-section">
+                <div class="record-block">
+                    <h4>Ações realizadas</h4>
+                    <p>Administração da medicação ... sob prescrição médica</p>
+                </div>
+
+                <div class="record-block">
+                    <h4>Sinais vitais</h4>
+                    <p>
+                        Temperatura corporal: 36.6º<br>
+                        Pressão arterial: 120/80 mmHg<br>
+                        Frequência cardíaca: 60bpm
+                    </p>
+                </div>
+
+                <div class="record-block">
+                    <h4>Evolução no tratamento</h4>
+                    <p>Paciente consciente, orientado, sem alterações importantes durante a visita.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

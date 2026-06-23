@@ -3,78 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atendimentos de Hoje</title>
-    <link rel="stylesheet" href="css/atendimentodia.css">
+    <title>MedHome - Login & Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
-<header class="topo">
-    <div class="titulo">
-        <a href="../nicolas/inicialprofissional.html">←</a>
+<div class="container">
 
-        <div>
-            <h1>Atendimentos de hoje</h1>
-            <p>Exibição das consultas marcadas na data atual.</p>
-        </div>
-    </div>
-</header>
-
-<main class="container">
-
-    <section class="data">
-        <div class="icone-data">📅</div>
-
-        <div>
-            <h2>Hoje, 20 de março de 2026</h2>
-            <p>3 atendimentos agendados para hoje</p>
-        </div>
-    </section>
-
-    <div class="card">
-        <div class="conteudo">
-
-            <div class="imagem-paciente">
-                <img src="img/idoso.png" alt="Paciente">
-            </div>
-
-            <div class="info">
-                <h3>Ademir de Sousa</h3>
-                <p>09:00 - Administração de medicação</p>
-                <p>📍 Rua Eurípedes de Aguiar, Nº41</p>
-            </div>
-
-        </div>
-
-        <div class="acoes">
-            <button class="btn-azul">Consultar histórico médico</button>
-            <button class="btn-branco">Visualizar detalhes do serviço</button>
-            <button class="btn-verde">Iniciar atendimento</button>
-        </div>
+    <div class="left">
+        <a href="index.html" title="Ir para a página inicial">
+            <img src="img/MedHome.png" alt="Logo MedHome">
+        </a>
+        <h1>MedHome</h1>
+        <p>Seu parceiro em cuidados domiciliar</p>
     </div>
 
-    <div class="card">
-        <div class="conteudo">
+    <div class="right">
+        
+        <div id="login-view" class="form-view active">
+            <h2>Bem-vindo!</h2>
+            <p class="subtitle">Entre com suas credenciais para continuar</p>
 
-            <div class="imagem-paciente">
-                <img src="img/idoso.png" alt="Paciente">
+            <form id="form-login">
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" required placeholder="Insira seu endereço de email">
+                </div>
+
+                <div class="form-group">
+                    <label>Senha:</label>
+                    <input type="password" required placeholder="Insira sua senha">
+                </div>
+
+                <div class="forgot">
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+
+            <div class="register">
+                Não tem uma conta? <a href="#" id="go-to-register">Cadastre-se</a>
             </div>
-
-            <div class="info">
-                <h3>Roberto da Silva</h3>
-                <p>15:00 - Avaliação corporal</p>
-                <p>📍 Rua Fernando Marques, Nº41</p>
-            </div>
-
         </div>
 
-        <div class="acoes">
-            <button class="btn-azul">Consultar histórico médico</button>
-            <button class="btn-branco">Visualizar detalhes do serviço</button>
-            <button class="btn-verde">Iniciar atendimento</button>
+        <div id="register-view" class="form-view">
+            <h2>Criar Conta</h2>
+            <p class="subtitle">Preencha os dados abaixo para se cadastrar</p>
+
+            <form id="form-register">
+                <div class="form-group">
+                    <label>Nome Completo:</label>
+                    <input type="text" required placeholder="Insira seu nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" required placeholder="Insira seu melhor email">
+                </div>
+
+                <div class="form-group">
+                    <label>Senha:</label>
+                    <input type="password" required placeholder="Crie uma senha forte">
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancelar" id="btn-cancelar">Cancelar</button>
+                    <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                </div>
+            </form>
         </div>
+
     </div>
+</div>
 
-</main>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const loginView = document.getElementById("login-view");
+    const registerView = document.getElementById("register-view");
+    const btnGoToRegister = document.getElementById("go-to-register");
+    const btnCancelar = document.getElementById("btn-cancelar");
+    const formLogin = document.getElementById("form-login");
+    const formRegister = document.getElementById("form-register");
 
+    btnGoToRegister.addEventListener("click", function(e) {
+        e.preventDefault();
+        loginView.classList.remove("active");
+        setTimeout(() => {
+            registerView.classList.add("active");
+        }, 200);
+    });
+
+    btnCancelar.addEventListener("click", function() {
+        registerView.classList.remove("active");
+        setTimeout(() => {
+            loginView.classList.add("active");
+            formRegister.reset();
+        }, 200);
+    });
+
+    formRegister.addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Cadastro realizado com sucesso na MedHome! Redirecionando para o login...");
+        registerView.classList.remove("active");
+        setTimeout(() => {
+            loginView.classList.add("active");
+            formRegister.reset();
+        }, 200);
+    });
+
+    formLogin.addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Login efetuado com sucesso!");
+    });
+});
+</script>
 </body>
 </html>

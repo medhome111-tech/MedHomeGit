@@ -195,3 +195,124 @@ body{
         font-size:28px;
     }
 }
+
+
+
+
+/* Estilo do círculo branco (Botão Voltar) */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid #D7D7D7;
+    
+    /* Configuração mágica para alinhar tudo no centro */
+    display: flex;            
+    align-items: center;      /* Centraliza verticalmente */
+    justify-content: center;   /* Centraliza horizontalmente */
+    
+    text-decoration: none;    /* Remove qualquer sublinhado padrão de link */
+    transition: background 0.2s ease;
+}
+
+/* Efeito sutil ao passar o mouse por cima do botão */
+.icon-circle:hover {
+    background: #F7F7F7;
+}
+
+/* Controle do tamanho da imagem da sua seta */
+.icon-seta {
+    width: 24px;              /* Ajuste esse tamanho se quiser a seta maior ou menor */
+    height: 24px;
+    object-fit: contain;      /* Impede que a imagem da seta distorça */
+    display: block;
+}
+
+
+
+
+
+/* 1. Estado Base do Botão (Ajuste ou adicione estas propriedades no seu .btn-login) */
+.btn-login {
+    /* (Mantenha as suas propriedades atuais de cor, tamanho e fonte aqui) */
+    
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    
+    /* Esta linha controla a suavidade da animação (tempo e curva de transição) */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 2. Animação ao passar o rato (Hover) */
+.btn-login:hover {
+    transform: translateY(-3px); /* O botão sobe levemente 3 píxeis */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* A sombra aumenta, dando efeito de flutuação */
+    filter: brightness(1.1); /* Dá um leve brilho na cor do botão */
+}
+
+/* 3. Animação ao clicar (Active) */
+.btn-login:active {
+    transform: translateY(-1px); /* O botão desce quase até à posição original */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* A sombra diminui, simulando o clique físico */
+    filter: brightness(0.95); /* Escurece ligeiramente para dar feedback de clique */
+}
+
+/* 4. [BÓNUS] Animação de surgimento suave quando a página carrega */
+@keyframes surgirBotao {
+    from {
+        opacity: 0;
+        transform: translateY(15px); /* Começa um pouco abaixo e invisível */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Sobe para a posição correta */
+    }
+}
+
+/* Aplica a animação de entrada assim que a página abre */
+.btn-login {
+    animation: surgirBotao 0.6s ease-out both;
+    animation-delay: 0.2s; /* Espera 0.2 segundos para surgir, dando um efeito elegante */
+}
+
+
+
+/* ==========================================================================
+   ANIMAÇÃO DO BOTÃO DA LOGO (MEDHOME)
+   ========================================================================== */
+
+/* 1. Estado Base do Link da Logo */
+.left a {
+    display: inline-block;   /* Necessário para que as animações funcionem corretamente */
+    text-decoration: none;
+    cursor: pointer;
+    
+    /* Controla a suavidade e o tempo de resposta da animação */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+}
+
+/* Evita que a imagem distorça ou saia do bloco */
+.left a img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Animação ao passar o mouse (Hover) */
+.left a:hover {
+    /* Efeito "Pop": Aumenta 8% de tamanho e sobe 3px dando sensação de flutuação */
+    transform: scale(1.08) translateY(-3px); 
+    /* Dá um leve ganho de brilho na imagem */
+    filter: brightness(1.05) drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* 3. Animação ao clicar (Active) */
+.left a:active {
+    /* Efeito "Pressionado": Encolhe um pouco abaixo do tamanho original */
+    transform: scale(0.95) translateY(0);
+    /* Escurece levemente para simular o clique físico */
+    filter: brightness(0.9);
+}

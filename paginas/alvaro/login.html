@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedHome - Login</title>
-
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
@@ -12,10 +11,11 @@
 <div class="container">
 
     <div class="left">
-        <img src="img/MedHome.png" alt="Logo MedHome">
+        <a href="paginainicial.html" title="Ir para a página inicial">
+            <img src="img/MedHome.png" alt="Logo MedHome">
+        </a>
 
         <h1>MedHome</h1>
-
         <p>Seu parceiro em cuidados domiciliar</p>
     </div>
 
@@ -27,20 +27,20 @@
             Entre com suas credenciais para continuar
         </p>
 
-        <form>
+        <form id="form-login">
 
             <div class="form-group">
                 <label>Email:</label>
-                <input type="email" placeholder="Insira seu endereço de email">
+                <input type="email" required placeholder="Insira seu endereço de email">
             </div>
 
             <div class="form-group">
                 <label>Senha:</label>
-                <input type="password" placeholder="Insira sua senha">
+                <input type="password" required placeholder="Insira sua senha">
             </div>
 
             <div class="forgot">
-                <a href="#">Esqueceu a senha?</a>
+                <a href="#" id="link-forgot">Esqueceu a senha?</a>
             </div>
 
             <button type="submit" class="btn-login">
@@ -51,12 +51,34 @@
 
         <div class="register">
             Não tem uma conta?
-            <a href="#">Cadastre-se</a>
+            <a href="#" id="link-register">Cadastre-se</a>
         </div>
 
     </div>
 
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const formLogin = document.getElementById("form-login");
+    const linkForgot = document.getElementById("link-forgot");
+    const linkRegister = document.getElementById("link-register");
+
+    formLogin.addEventListener("submit", function(e) {
+        e.preventDefault();
+        window.location.href = "paginaincialpaciente.html";
+    });
+
+    linkForgot.addEventListener("click", function(e) {
+        e.preventDefault();
+        window.location.href = "recuperarsenha.html";
+    });
+
+    linkRegister.addEventListener("click", function(e) {
+        e.preventDefault();
+        window.location.href = "../alan/tipocadastro.html";
+    });
+});
+</script>
 </body>
 </html>

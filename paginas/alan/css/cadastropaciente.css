@@ -110,25 +110,40 @@ textarea{
     font-size:20px;
     font-weight:700;
     cursor:pointer;
-    transition:.3s;
-}
-
-.btn:hover{
-    opacity:.9;
+    outline:none;
+    transition:transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .btn-cancelar{
     background:#F0F0F0;
     color:#000;
+    border:1px solid #C3C3C3;
 }
 
 .btn-cadastrar{
     background:#5260F7;
     color:white;
+    box-shadow:0 4px 6px rgba(82, 96, 247, 0.15);
+}
+
+.btn-cadastrar:hover{
+    transform:translateY(-3px) scale(1.02);
+    background-color:#414ee0;
+    box-shadow:0 8px 15px rgba(82, 96, 247, 0.3);
+}
+
+.btn-cancelar:hover{
+    transform:translateY(-3px) scale(1.02);
+    background-color:#E5E5E5;
+    box-shadow:0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active{
+    transform:translateY(-1px) scale(0.98);
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media(max-width:768px){
-
     .container{
         padding:25px;
     }
