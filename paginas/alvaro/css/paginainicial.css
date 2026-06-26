@@ -409,3 +409,48 @@ footer {
     height: 40px;
     object-fit: contain;
 }
+
+
+
+
+
+a.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; 
+}
+
+.action-card, .category, .recent-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.action-card:hover, .category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-blue {
+    text-decoration: none; 
+    display: inline-block; 
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-blue:hover {
+    filter: brightness(1.1);
+    transform: scale(1.03);
+}
+
+.action-card:active, .category:active, .btn-blue:active, .header-right a:active {
+    transform: scale(0.97) !important;
+}
+
+.header-right a, .header-right img {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header-right a:hover, .header-right img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
