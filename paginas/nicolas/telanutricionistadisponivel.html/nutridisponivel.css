@@ -1,0 +1,539 @@
+/* ============================
+   RESET
+============================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width:100%;
+    height:110px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:200px;
+    height:auto;
+    display:block;
+    object-fit:contain;
+}
+
+.cidade{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    font-weight:600;
+}
+
+.cidade i{
+    color:#147AFF;
+    font-size:28px;
+}
+/* ============================
+   PESQUISA
+============================ */
+
+.pesquisa{
+
+    width:90%;
+    margin:40px auto 25px;
+
+}
+
+.buscar{
+
+    background:#fff;
+
+    height:75px;
+
+    border-radius:15px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 30px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.buscar i{
+
+    font-size:24px;
+    color:#147AFF;
+
+}
+
+.buscar input{
+
+    flex:1;
+
+    border:none;
+    outline:none;
+
+    margin-left:20px;
+
+    font-size:20px;
+
+    background:transparent;
+
+}
+
+/* ============================
+   FILTROS
+============================ */
+
+.filtros{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.filtros button{
+
+    background:#fff;
+
+    border:none;
+
+    padding:18px 35px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.filtros button:hover{
+
+    background:#147AFF;
+    color:#fff;
+
+}
+
+/* ============================
+   TITULO
+============================ */
+
+.titulo{
+
+    width:90%;
+
+    margin:50px auto;
+
+}
+
+.titulo h1{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+.titulo span{
+
+    background:#CDE2FF;
+
+    color:#003cff;
+
+    padding:8px 20px;
+
+    border-radius:20px;
+
+    display:inline-block;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.titulo p{
+
+    font-size:20px;
+
+    color:#666;
+
+}
+
+/* ============================
+   CARDS
+============================ */
+
+.cards{
+
+    width:90%;
+
+    margin:auto;
+
+}
+
+.card{
+
+    position:relative;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    display:flex;
+
+    gap:35px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+/* FOTO */
+
+.foto{
+
+    width:220px;
+
+    min-width:220px;
+
+}
+
+.foto img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+/* CONTEÚDO */
+
+.informacoes{
+
+    flex:1;
+
+}
+
+.cabecalho-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+}
+
+.cabecalho-card h2{
+
+    font-size:34px;
+
+}
+
+.verificado{
+
+    background:#DCE9FF;
+
+    color:#0043d6;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.informacoes p{
+
+    margin:18px 0;
+
+    font-size:20px;
+
+}
+
+.informacoes i{
+
+    width:30px;
+
+    color:#147AFF;
+
+}
+
+/* ESPECIALIDADE */
+
+.especialidade{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#ECECEC;
+
+    color:#003cff;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+}
+
+/* BOTÕES */
+
+.botoes{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.perfil{
+
+    flex:1;
+
+    height:60px;
+
+    border:none;
+
+    background:#147AFF;
+
+    color:#fff;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.perfil:hover{
+
+    background:#005ce6;
+
+}
+
+.contratar{
+
+    flex:1;
+
+    height:60px;
+
+    border:none;
+
+    background:#18A43D;
+
+    color:#fff;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.contratar:hover{
+
+    background:#0b8a2e;
+
+}
+
+/* FAVORITO */
+
+.favorito{
+
+    position:absolute;
+
+    right:30px;
+
+    top:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.favorito:hover{
+
+    color:red;
+
+    transform:scale(1.1);
+
+}
+
+/* ============================
+   RESPONSIVO
+============================ */
+
+@media(max-width:1200px){
+
+    .card{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .cabecalho-card{
+
+        flex-direction:column;
+
+    }
+
+    .botoes{
+
+        flex-direction:column;
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    .logo img{
+
+        width:180px;
+
+    }
+
+    .filtros{
+
+        flex-direction:column;
+
+    }
+
+    .buscar input{
+
+        font-size:17px;
+
+    }
+
+    .titulo h1{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .foto{
+
+        width:100%;
+
+    }
+
+    .foto img{
+
+        height:300px;
+
+    }
+
+    .cabecalho-card h2{
+
+        font-size:28px;
+
+    }
+
+    .informacoes p{
+
+        font-size:18px;
+
+    }
+
+    .perfil,
+    .contratar{
+
+        font-size:18px;
+
+    }
+
+}
