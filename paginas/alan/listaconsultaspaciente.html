@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Consultas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/listaconsultaspaciente.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="top-header">
+            <div class="header-left">
+                <img class="logo" src="img/logonome-medhome.png" height="70px">
+                <nav class="main-nav">
+                    <a href="#">Painel</a>
+                    <a href="#" class="active">Consultas</a>
+                    <a href="#">Solicitações</a>
+                    <a href="#">Pagamentos</a>
+                    <a href="#">Mensagens</a>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="notification-icon">
+                    <img src="img/greybell.png" alt="">
+                </div>
+                <div class="divider"></div>
+                <div class="user-profile">
+                    <img class="avatar-img" src="img/idoso.png" height="80px">
+                    <div class="user-info">
+                        <span class="user-name">Ademir</span>
+                        <span class="user-role">Paciente</span>
+                    </div>
+                </div>
+                <a href="#" class="logout-link">Sair</a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Consultas</h1>
+                <p>Veja aqui as consultas agendadas por você</p>
+            </header>
+
+            <div class="tabs-container">
+                <button class="tab-btn active">Todas</button>
+                <button class="tab-btn">Agendadas</button>
+                <button class="tab-btn">Concluídas</button>
+                <button class="tab-btn">Canceladas</button>
+            </div>
+
+            <h2 class="date-separator">Hoje - 18 de junho</h2>
+
+            <div class="cards-grid">
+                
+                <section class="card consultation-card">
+                    <div class="card-header">
+                        <div class="profile-info">
+                            <div class="avatar-circle">AS</div>
+                            <div class="profile-text">
+                                <span class="name">Ana Paula de Sousa</span>
+                                <span class="role">Enfermeira</span>
+                            </div>
+                        </div>
+                        <div class="payment-info">
+                            <span class="price">R$90</span>
+                            <span class="status-badge">Pago</span>
+                        </div>
+                    </div>
+
+                    <div class="details-list">
+                        <div class="detail-item">
+                            <span>Administração de medicação</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="text-muted">21 de junho, 18:00</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="text-muted">Rua Alfredo Pacheco - Centro</span>
+                        </div>
+                    </div>
+
+                    <div class="observation-box">
+                        <strong>Observações do paciente:</strong> <span class="text-muted">Pós operatório de cesariana realizado há 3 dias</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-primary">Ver detalhes</button>
+                        <button class="btn btn-secondary">
+                            <img src="img/greymessageiconpng.png">
+                            Mandar mensagem
+                        </button>
+                    </div>
+                </section>
+
+                <aside class="card care-plan-card">
+                    <h3 class="section-title">PLANO DE CUIDADO ATIVO</h3>
+                    
+                    <div class="profile-info">
+                        <div class="avatar-circle">AS</div>
+                        <div class="profile-text">
+                            <span class="name">Ana Paula de Sousa</span>
+                            <span class="role">Administração de medicação</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progresso</span>
+                            <span class="progress-stats"><strong>3</strong> <span class="text-muted">de 5 visitas</span></span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span class="progress-date text-muted">Início: 18/06</span>
+                    </div>
+
+                    <button class="btn btn-outline full-width">Ver plano completo</button>
+                </aside>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
