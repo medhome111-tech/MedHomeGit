@@ -1,0 +1,247 @@
+/* Variáveis de Cor baseadas no seu design original */
+:root {
+    --bg-page: #F0F0F0;
+    --card-bg: #FFFFFF;
+    --text-main: #000000;
+    --line-color: #C3C3C3;
+    --btn-blue: #0016FF;
+    --status-green: #89FF97;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-page);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Container Principal */
+.profile-container {
+    width: 100%;
+    max-width: 1364px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Estilo Base dos Cards */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px 50px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--line-color);
+    margin: 25px 0;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* =========================================
+   Seção 1: Cabeçalho
+   ========================================= */
+.profile-header {
+    display: flex;
+    gap: 50px;
+}
+
+.profile-img {
+    width: 313px;
+    height: 471px;
+    object-fit: cover;
+    border-radius: 8px; /* Adicionado um leve arredondamento */
+}
+
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.name {
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.profession {
+    font-size: 35px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.btn-message {
+    background-color: var(--btn-blue);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-message:hover {
+    opacity: 0.8;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.details-grid strong {
+    font-weight: 700;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+}
+
+.status-badge {
+    width: 100px;
+    height: 38px;
+    background-color: var(--status-green);
+    border-radius: 40px;
+}
+
+/* =========================================
+   Seção 2: Dados Profissionais
+   ========================================= */
+.data-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.data-row {
+    font-size: 27px;
+    display: flex;
+}
+
+.data-row strong {
+    min-width: 330px; /* Alinha os valores */
+    font-weight: 700;
+}
+
+/* =========================================
+   Seção 3: Cidade
+   ========================================= */
+.city-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 27px;
+}
+
+/* =========================================
+   Seção 4: Sobre Mim
+   ========================================= */
+.about-text {
+    font-size: 27px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   Seção 5: Avaliações
+   ========================================= */
+.review-box {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.reviewer-img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reviewer-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.stars-img {
+    height: 30px; /* Ajuste para não ficar desproporcional */
+    object-fit: contain;
+}
+
+.review-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+/* =========================================
+   Responsividade (Telas menores)
+   ========================================= */
+@media (max-width: 1024px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .data-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .data-row strong {
+        min-width: auto;
+    }
+}
