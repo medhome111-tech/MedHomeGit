@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Solicitações</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/solicitacoespaciente.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="top-header">
+            <div class="header-left">
+                <img class="logo" src="img/logonome-medhome.png" height="80px">
+                <nav class="main-nav">
+                    <a href="#">Painel</a>
+                    <a href="#">Consultas</a>
+                    <a href="#" class="active">Solicitações</a>
+                    <a href="#">Pagamentos</a>
+                    <a href="#">Mensagens</a>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="notification-icon">
+                    <img src="img/greybell.png">
+                </div>
+                <div class="divider"></div>
+                <div class="user-profile">
+                    <img class="avatar-img" src="img/idoso.png" height="80px">
+                    <div class="user-info">
+                        <span class="user-name">Ademir</span>
+                        <span class="user-role">Paciente</span>
+                    </div>
+                </div>
+                <a href="#" class="logout-link">Sair</a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Solicitações</h1>
+                <p>Veja aqui as solicitações enviadas por você</p>
+            </header>
+
+            <div class="tabs-container">
+                <button class="tab-btn active">Todas</button>
+                <button class="tab-btn">Pendentes</button>
+                <button class="tab-btn">Aceitas</button>
+                <button class="tab-btn">Recusadas</button>
+            </div>
+
+            <div class="requests-list">
+                
+                <article class="request-card">
+                    <div class="card-header">
+                        <div class="header-info-group">
+                            <div class="profile-info">
+                                <div class="avatar-circle">AS</div>
+                                <div class="profile-text">
+                                    <span class="name">Ana Paula de Sousa</span>
+                                    <span class="role">Enfermeira</span>
+                                </div>
+                            </div>
+                            <span class="badge badge-warning">Aguardando resposta</span>
+                        </div>
+                        
+                        <div class="payment-info">
+                            <span class="price">R$90</span>
+                            <span class="badge badge-success-light">Pago</span>
+                        </div>
+                    </div>
+
+                    <div class="details-list">
+                        <div class="detail-item">
+                            <span>Administração de medicação</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="text-muted">21 de junho, 18:00</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="text-muted">Rua Alfredo Pacheco - Centro</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-danger">Cancelar solicitação</button>
+                        <button class="btn btn-secondary">
+                            <img src="img/greymessageiconpng.png">
+                            Mandar mensagem
+                        </button>
+                    </div>
+                </article>
+
+                <article class="request-card">
+                    <div class="card-header">
+                        <div class="header-info-group">
+                            <div class="profile-info">
+                                <div class="avatar-circle">AS</div>
+                                <div class="profile-text">
+                                    <span class="name">Ana Paula de Sousa</span>
+                                    <span class="role">Enfermeira</span>
+                                </div>
+                            </div>
+                            <span class="badge badge-success">Concluído</span>
+                        </div>
+                        
+                        <div class="payment-info">
+                            <span class="price">R$90</span>
+                            <span class="badge badge-success-light">Pago</span>
+                        </div>
+                    </div>
+
+                    <div class="details-list">
+                        <div class="detail-item">
+                            <span>Administração de medicação</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="text-muted">21 de junho, 18:00</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="text-muted">Rua Alfredo Pacheco - Centro</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-yellow">Avaliar atendimento</button>
+                        <button class="btn btn-secondary">Ver detalhes</button>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
