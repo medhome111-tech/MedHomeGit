@@ -1,0 +1,371 @@
+:root{
+    --azul:#2563EB;
+    --azul-hover:#1D4ED8;
+    --azul-claro:#E8F0FF;
+
+    --verde:#22C55E;
+    --verde-claro:#EAFBF1;
+
+    --bg:#F4F6FA;
+    --card:#FFFFFF;
+    --borda:#E6E8EF;
+
+    --texto:#0F172A;
+    --sec:#64748B;
+    --muted:#94A3B8;
+
+    --radius:14px;
+    --shadow:0 10px 30px rgba(15,23,42,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:Inter,sans-serif;
+    background:var(--bg);
+    color:var(--texto);
+}
+
+a,button,img{
+    color:inherit;
+    text-decoration:none;
+    border:0;
+    outline:0;
+    background:none;
+    cursor:pointer;
+}
+
+img{max-width:100%;display:block}
+
+.header{
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 32px;
+    background:var(--card);
+    border-bottom:1px solid var(--borda);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo img{width:150px}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+nav{display:flex;gap:6px}
+
+nav a{
+    font-size:14px;
+    font-weight:600;
+    padding:8px 12px;
+    border-radius:10px;
+    color:var(--sec);
+    transition:.2s;
+}
+
+nav a:hover{
+    background:var(--azul-claro);
+    color:var(--azul);
+}
+
+nav .ativo{
+    background:var(--azul);
+    color:#fff;
+}
+
+.usuario{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.painel-profissional{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:6px 10px;
+    border-radius:999px;
+    background:var(--verde-claro);
+    color:var(--verde);
+    font-size:12px;
+    font-weight:700;
+}
+
+.status{
+    width:7px;height:7px;border-radius:50%;
+    background:var(--verde);
+}
+
+.notificacao{
+    width:38px;height:38px;
+    display:flex;align-items:center;justify-content:center;
+    border-radius:10px;
+    color:var(--sec);
+    transition:.2s;
+}
+
+.notificacao:hover{
+    background:var(--azul-claro);
+    color:var(--azul);
+}
+
+.avatar{
+    width:46px;height:46px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--azul),#60A5FA);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;
+    font-weight:700;
+}
+
+.container{
+    width:min(1100px,92%);
+    margin:28px auto 60px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--borda);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:20px;
+}
+
+.paciente-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+}
+
+.paciente-info{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.avatar-paciente{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--azul),#60A5FA);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-weight:700;
+}
+
+.dados h2{
+    font-size:20px;
+}
+
+.dados p{
+    font-size:13px;
+    color:var(--sec);
+}
+
+.badge{
+    display:inline-flex;
+    padding:4px 10px;
+    font-size:12px;
+    font-weight:700;
+    border-radius:999px;
+    background:var(--verde-claro);
+    color:var(--verde);
+    margin-top:6px;
+}
+
+.btn-mensagem{
+    padding:10px 14px;
+    background:var(--azul);
+    color:#fff;
+    font-size:13px;
+    font-weight:600;
+    border-radius:10px;
+    transition:.2s;
+}
+
+.btn-mensagem:hover{
+    background:var(--azul-hover);
+    transform:translateY(-1px);
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.titulo-card{
+    font-size:11px;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:14px;
+    font-weight:700;
+}
+
+.progresso{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+.progresso h3{
+    font-size:26px;
+}
+
+.progresso strong{
+    color:var(--azul);
+}
+
+.barra{
+    height:8px;
+    background:#E8EDF5;
+    border-radius:999px;
+    overflow:hidden;
+}
+
+.barra-preenchida{
+    width:60%;
+    height:100%;
+    background:var(--azul);
+}
+
+.contato{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.contato p{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    color:var(--sec);
+}
+
+.contato strong{color:var(--texto)}
+
+.dados-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.item{
+    display:flex;
+    gap:10px;
+}
+
+.item i{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    background:var(--azul-claro);
+    color:var(--azul);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.item span{
+    font-size:12px;
+    color:var(--muted);
+}
+
+.item h4{
+    font-size:14px;
+    font-weight:600;
+}
+
+.documentos{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.arquivo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid var(--borda);
+    background:#FAFBFF;
+    transition:.2s;
+}
+
+.arquivo:hover{
+    background:#EEF4FF;
+    transform:translateY(-1px);
+}
+
+.arquivo-info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.icone{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.download{
+    width:34px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    color:var(--azul);
+}
+
+@media(max-width:900px){
+    .info-grid,
+    .dados-grid{
+        grid-template-columns:1fr;
+    }
+
+    .paciente-card{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .btn-mensagem{
+        width:100%;
+        text-align:center;
+    }
+}
+
+@media(max-width:600px){
+    .header{
+        padding:0 18px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .container{
+        width:94%;
+    }
+}
