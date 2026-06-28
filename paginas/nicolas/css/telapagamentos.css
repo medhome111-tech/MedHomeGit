@@ -1,0 +1,514 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --azul:#0016FF;
+    --azul-claro:#B4BBFF;
+    --verde:#52B445;
+    --cinza:#F0F0F0;
+    --texto:#666;
+    --branco:#fff;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--cinza);
+    color:#000;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.header{
+    width:100%;
+    height:110px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 50px;
+    border-bottom:1px solid #ddd;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.logo img{
+    width:190px;
+}
+
+.painel-profissional{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    background:rgba(82,180,69,.15);
+    border-radius:18px;
+    color:var(--verde);
+    font-size:13px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.status{
+    width:8px;
+    height:8px;
+    background:#00C907;
+    border-radius:50%;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+nav a{
+    font-size:17px;
+    font-weight:500;
+    color:rgba(0,0,0,.65);
+    transition:.25s;
+}
+
+nav a:hover{
+    color:var(--azul);
+}
+
+nav .ativo{
+    background:var(--azul-claro);
+    color:var(--azul);
+    padding:8px 18px;
+    border-radius:18px;
+}
+
+.usuario{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.usuario i{
+    font-size:25px;
+    color:var(--texto);
+}
+
+.avatar{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--azul);
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.info h3{
+    font-size:21px;
+    font-weight:600;
+}
+
+.info span{
+    font-size:15px;
+    color:var(--texto);
+}
+
+.container{
+    width:90%;
+    max-width:1600px;
+    margin:45px auto;
+}
+
+.titulo{
+    margin-bottom:35px;
+}
+
+.titulo h1{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.titulo p{
+    font-size:18px;
+    color:#777;
+}
+
+.cards{
+    display:flex;
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.card{
+    width:380px;
+    height:165px;
+    padding:28px;
+    border-radius:22px;
+    position:relative;
+}
+
+.card p{
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.card h2{
+    font-size:33px;
+    margin-bottom:18px;
+}
+
+.card span{
+    font-size:14px;
+}
+
+.saldo{
+    background:var(--azul);
+    color:#fff;
+}
+
+.saldo p{
+    color:rgba(255,255,255,.75);
+}
+
+.saldo span{
+    color:rgba(255,255,255,.80);
+}
+
+.receber{
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.receber p{
+    color:#555;
+}
+
+.receber span{
+    color:#777;
+}
+
+.icone{
+    position:absolute;
+    top:25px;
+    right:25px;
+}
+
+.icone i{
+    font-size:26px;
+    color:#5500FF;
+}
+
+.filtros{
+    width:400px;
+    background:#fff;
+    padding:8px;
+    display:flex;
+    gap:10px;
+    border-radius:12px;
+    margin-bottom:35px;
+}
+
+.filtros button{
+    flex:1;
+    height:42px;
+    border-radius:10px;
+    background:none;
+    font-size:15px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.filtros button:hover{
+    background:#ECECEC;
+}
+
+.filtros .ativo{
+    background:var(--azul);
+    color:#fff;
+}
+
+.conteudo{
+    display:flex;
+    gap:35px;
+    align-items:flex-start;
+}
+
+.lista{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+.pagamento{
+    background:#fff;
+    min-height:145px;
+    padding:28px 30px;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+    transition:.25s;
+}
+
+.pagamento:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.paciente{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.paciente .avatar{
+    width:80px;
+    height:80px;
+    font-size:22px;
+}
+
+.azul{background:#0016FF;}
+.verde{background:#00C853;}
+.vermelho{background:#FF2A2A;}
+
+.paciente h3{
+    font-size:23px;
+    margin-bottom:6px;
+}
+
+.paciente span{
+    font-size:16px;
+    color:#777;
+}
+
+.status-pagamento{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    border-radius:20px;
+    font-size:15px;
+    font-weight:600;
+}
+
+.status-pagamento i{
+    font-size:17px;
+}
+
+.pago{
+    background:#CCFFD2;
+    color:#119600;
+}
+
+.pendente{
+    background:#FFF2CC;
+    color:#C28A00;
+}
+
+.cancelado{
+    background:#FFD6D6;
+    color:#C40000;
+}
+
+.valor{
+    min-width:110px;
+    text-align:right;
+    font-size:24px;
+    font-weight:700;
+}
+
+.sidebar{
+    width:460px;
+    background:#fff;
+    border-radius:22px;
+    padding:28px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.sidebar h2{
+    font-size:23px;
+    margin-bottom:25px;
+}
+
+.conta{
+    background:#F3F3F3;
+    padding:18px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:20px;
+}
+
+.conta img{
+    width:42px;
+}
+
+.conta h3{
+    font-size:21px;
+    margin-bottom:4px;
+}
+
+.conta span{
+    color:#777;
+    font-size:15px;
+}
+
+.sidebar button{
+    width:100%;
+    height:58px;
+    margin-top:16px;
+    border-radius:16px;
+    border:1px solid #DDD;
+    background:#fff;
+    font-size:17px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.sidebar button:hover{
+    background:#F5F5F5;
+}
+
+.relatorio{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.relatorio i{
+    color:#0016FF;
+}
+
+@media(max-width:1400px){
+
+    .container{
+        width:94%;
+    }
+
+    nav{
+        gap:22px;
+    }
+
+    .sidebar{
+        width:400px;
+    }
+
+}
+
+@media(max-width:1200px){
+
+    .header{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+        gap:18px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+
+    .conteudo{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+        width:95%;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .filtros{
+        width:100%;
+    }
+
+    .pagamento{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .paciente{
+        width:100%;
+    }
+
+    .valor{
+        text-align:left;
+    }
+
+    .usuario{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .logo img{
+        width:150px;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:15px;
+    }
+
+    .titulo h1{
+        font-size:28px;
+    }
+
+    .titulo p{
+        font-size:16px;
+    }
+
+    .paciente h3{
+        font-size:20px;
+    }
+
+    .valor{
+        font-size:22px;
+    }
+
+    .sidebar h2{
+        font-size:20px;
+    }
+
+    .info h3{
+        font-size:18px;
+    }
+
+}
