@@ -1,0 +1,1387 @@
+/* VARIÁVEIS DE CORES E FONTES */
+:root {
+    --bg-page: #F0F0F0;
+    --white: #FFFFFF;
+    --text-dark: #000000;
+    --text-muted: rgba(0, 0, 0, 0.6);
+    --primary-blue: #0016FF;
+    --primary-blue-hover: #000DCC;
+    --green-light: #52B445;
+    --green-bg: rgba(62, 255, 85, 0.2);
+    --border-color: #C3C3C3;
+    --btn-gray: #E0E0E0;
+    --red: #FF0000;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+.header {
+    background-color: var(--white);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #8D8D8D;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: var(--text-muted);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-menu a.active, .nav-menu a:hover {
+    background-color: #B4BBFF;
+    color: var(--text-dark);
+}
+
+.nav-mensagens .badge {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-left: 1px solid #D9D9D9;
+    padding-left: 20px;
+}
+
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.perfil-info .nome {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.perfil-info .cargo {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.avatar-header {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* LAYOUT PRINCIPAL */
+.container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* TOPO SAUDAÇÃO E TOGGLE */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.tag-painel {
+    background-color: var(--green-bg);
+    color: var(--green-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.boa-tarde {
+    font-size: 20px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.saudacao h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.status-disponibilidade {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--bg-page);
+    border: 1px solid #5260F7;
+    padding: 15px 25px;
+    border-radius: 15px;
+}
+
+.status-text strong {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.status-text span {
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+/* BOTÃO DE STATUS (LIGA/DESLIGA) */
+.toggle-switch {
+    width: 60px;
+    height: 30px;
+    background-color: var(--btn-gray);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch.active {
+    background-color: var(--primary-blue);
+}
+
+.toggle-circle {
+    width: 22px;
+    height: 22px;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch.active .toggle-circle {
+    transform: translateX(30px);
+}
+
+/* KPIS GRID */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.kpi-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.kpi-icon {
+    font-size: 40px;
+}
+
+.kpi-dados p {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.kpi-dados h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+/* GRID PRINCIPAL (COLUNAS) */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 40px;
+}
+
+.secao-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.secao-titulo h2 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.link-ver-todas {
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+.data-hoje {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* CARDS DE SOLICITAÇÃO */
+.card-lista {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.paciente-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.avatar.red { background-color: var(--red); }
+.avatar.blue { background-color: var(--primary-blue); }
+
+.paciente-info h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.paciente-info p {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.data-hora {
+    font-size: 14px;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 5px;
+}
+
+.preco {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.botoes-acao {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-aceitar {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-aceitar:hover { background-color: var(--primary-blue-hover); }
+
+.btn-recusar {
+    background-color: var(--btn-gray);
+    color: var(--text-muted);
+}
+
+.btn-recusar:hover { background-color: #D0D0D0; }
+
+/* CARDS SIMPLES (Mensagens) */
+.card-simples {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.msg-preview {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.mt-40 { margin-top: 40px; }
+
+/* AGENDA */
+.card-agenda {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.item-agenda {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid transparent;
+}
+
+.item-agenda.border-green {
+    border-left-color: #00CA18;
+    background-color: rgba(134, 255, 142, 0.2);
+}
+
+.item-agenda.border-blue {
+    border-left-color: var(--primary-blue);
+    background-color: rgba(9, 116, 255, 0.1);
+}
+
+.item-agenda .horario {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.item-agenda h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.item-agenda p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.btn-outline-blue {
+    display: block;
+    text-align: center;
+    border: 1px solid rgba(46, 0, 255, 0.4);
+    color: var(--primary-blue);
+    padding: 15px;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.btn-outline-blue:hover {
+    background-color: rgba(9, 116, 255, 0.05);
+}
+
+
+.logo img {
+    max-height: 50px;
+    width: auto; 
+    display: block; 
+}
+
+/* =========================================
+   ESTILOS DA PÁGINA DE PAGAMENTOS
+========================================= */
+
+.page-header h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    font-size: 20px;
+    color: var(--text-muted);
+}
+
+/* CARDS FINANCEIROS (Saldo e A Receber) */
+.finance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 380px);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.finance-card {
+    border-radius: 25px;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+}
+
+.finance-card.bg-blue {
+    background-color: var(--primary-blue);
+}
+
+.finance-card.bg-white {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+}
+
+.finance-title {
+    font-size: 18px;
+}
+
+.finance-value {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.finance-footer {
+    font-size: 14px;
+}
+
+.text-light { color: rgba(255, 255, 255, 0.7); }
+.text-white { color: var(--white); }
+.text-dark { color: var(--text-dark); }
+
+/* ABAS DE FILTRO */
+.tabs-container {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 5px;
+    width: fit-content;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+/* LISTA DE PAGAMENTOS */
+.card-pagamento {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pagamento-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-pago {
+    background-color: #CCFFD2;
+    color: #119600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* CARD CONTA BANCÁRIA */
+.card-banco {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.info-banco {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.banco-logo {
+    font-size: 30px;
+}
+
+.info-banco h3 {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.info-banco p {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.acoes-banco {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+}
+
+.btn-acao-banco {
+    font-size: 18px;
+    color: var(--text-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-acao-banco:hover {
+    color: var(--primary-blue);
+}
+
+/* UTILIDADES EXTRAS */
+.avatar.green { background-color: #00FF1E; color: var(--text-dark); }
+
+
+/* =========================================
+   ESTILOS DA PÁGINA DE SOLICITAÇÕES
+========================================= */
+
+/* CARDS DE SOLICITAÇÃO DETALHADA */
+.card-detalhado {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.detalhe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.tempo-solicitacao {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.preco-destaque {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.detalhe-corpo {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.info-linha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.icone-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(150, 164, 255, 0.2);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.texto-info {
+    font-size: 16px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.texto-info.text-dark {
+    color: var(--text-dark);
+}
+
+.observacao-box {
+    background-color: var(--bg-page);
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* BOTÕES DE AÇÃO */
+.detalhe-acoes {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-acao {
+    height: 55px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sucesso {
+    background-color: #09BD00;
+    color: var(--white);
+    flex: 2; /* Ocupa mais espaço */
+}
+
+.btn-sucesso:hover { background-color: #08A100; }
+
+.btn-outline {
+    background-color: var(--white);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    flex: 1;
+}
+
+.btn-outline:hover { background-color: #F8F8F8; }
+
+.icon-btn {
+    flex: 0.5; /* Botão menor apenas para o ícone */
+    font-size: 22px;
+}
+
+/* WIDGETS (Coluna Direita) */
+.widget-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.widget-titulo {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dicas-lista {
+    list-style: none;
+}
+
+.dicas-lista li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.dicas-lista p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.dica-icon {
+    font-size: 20px;
+    background-color: rgba(150, 164, 255, 0.2);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* WIDGET DISPONIBILIDADE */
+.disp-status {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.disp-toggle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-page);
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.link-config {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.link-config:hover {
+    background-color: #F8F8F8;
+}
+
+
+
+/* =========================================
+   ESTILOS DA PÁGINA DE AGENDA
+========================================= */
+
+/* CABEÇALHO AGENDA */
+.agenda-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agenda-header h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.agenda-controles {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.seletor-periodo {
+    background-color: #EAEAEA;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.seletor-visualizacao {
+    display: flex;
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.btn-vis {
+    padding: 8px 20px;
+    border: none;
+    background: transparent;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-vis.active {
+    background-color: var(--white);
+}
+
+.btn-bloquear {
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* LAYOUT GRID DA AGENDA */
+.grid-agenda {
+    grid-template-columns: 3fr 1fr; /* Coluna do calendário é bem mais larga que a sidebar */
+}
+
+/* ESTRUTURA DO CALENDÁRIO */
+.calendario-container {
+    display: flex;
+    border: 1px solid rgba(212, 212, 212, 0.5);
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cal-coluna {
+    flex: 1;
+    border-right: 1px solid rgba(212, 212, 212, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.cal-coluna:last-child {
+    border-right: none;
+}
+
+.cal-horas {
+    flex: 0 0 80px; /* Largura fixa para a coluna de horas */
+    background-color: #EDEDED;
+}
+
+.cal-header, .cal-header-vazio {
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cal-header strong {
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-top: 5px;
+}
+
+.cal-hora, .cal-slot {
+    height: 95px; /* Altura de 1 hora na agenda */
+    border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+    position: relative; /* Importante para posicionar os eventos */
+}
+
+.cal-hora {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* EVENTO DA AGENDA */
+.evento-agenda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #D8FFDE;
+    border-left: 5px solid #24DA00;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.evento-agenda.duplo {
+    height: calc(200% + 1px); /* Ocupa 2 slots de 1 hora */
+}
+
+.evento-agenda h3 {
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.evento-agenda p {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+/* COMPONENTES DA SIDEBAR (Resumo) */
+.mb-20 { margin-bottom: 20px; }
+.mt-20 { margin-top: 20px; }
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.resumo-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+}
+
+.icone-cinza {
+    font-size: 18px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+.separador {
+    height: 1px;
+    background-color: rgba(212, 212, 212, 0.5);
+    width: 100%;
+}
+
+.btn-acao-borda {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-borda-azul {
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-borda-azul:hover { background-color: rgba(0, 22, 255, 0.05); }
+
+.btn-borda-preta {
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+}
+
+.btn-borda-preta:hover { background-color: rgba(0, 0, 0, 0.05); }
+
+
+/* =========================================
+   ESTILOS DA PÁGINA DE MENSAGENS
+========================================= */
+
+/* Trava a rolagem da página para que apenas o chat role internamente */
+.chat-body {
+    overflow: hidden;
+}
+
+/* Container principal do Chat */
+.chat-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    height: calc(100vh - 130px); /* Ocupa o resto da tela abaixo do header */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 0; /* Remove padding padrão do container */
+}
+
+/* --- COLUNA ESQUERDA (SIDEBAR) --- */
+.chat-sidebar {
+    background-color: var(--white);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-search-container {
+    padding: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid #B1B1B1;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.chat-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+}
+
+.filter-pill {
+    background: var(--white);
+    border: 1px solid #B1B1B1;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filter-pill.active {
+    background: #EBEBEB;
+    font-weight: 500;
+}
+
+.filter-btn-add {
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    border-bottom: 1px solid #F0F0F0;
+    transition: 0.2s;
+}
+
+.chat-item:hover {
+    background-color: #FAFAFA;
+}
+
+.chat-item.active {
+    background-color: #E0E0E0;
+    border-left-color: var(--primary-blue);
+}
+
+.chat-item-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.chat-item-info p {
+    font-size: 14px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+/* --- COLUNA DIREITA (JANELA DE CHAT) --- */
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-page);
+}
+
+.chat-main-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat-header-info h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.chat-header-info span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+.chat-history {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.chat-input-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-anexo {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.chat-input {
+    flex: 1;
+    background-color: #EBEBEB;
+    border: 1px solid #BFBFBF;
+    border-radius: 50px;
+    padding: 15px 25px;
+    font-size: 15px;
+    outline: none;
+}
+
+.btn-enviar {
+    background-color: var(--primary-blue); /* Ajustado para a variável da sua marca */
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 35px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--primary-blue-hover);
+}
+
+
+/* =========================================
+   ESTILOS DA PÁGINA DE PACIENTES
+========================================= */
+
+/* CABEÇALHO E BUSCA */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.busca-paciente input {
+    width: 300px;
+    padding: 15px 20px;
+    border: 1px solid #C2C2C2;
+    border-radius: 15px;
+    font-size: 15px;
+    outline: none;
+    background-color: var(--white);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+/* CARDS DE MÉTRICAS */
+.metricas-pacientes {
+    display: flex;
+    gap: 20px;
+}
+
+.card-metrica {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.metrica-icone {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.metrica-label {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.card-acao {
+    border: 1px solid #C2C2C2;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.card-acao:hover {
+    background-color: #F8F8F8;
+}
+
+.seta-acao {
+    font-size: 20px;
+}
+
+/* CORES DOS ÍCONES DE MÉTRICA */
+.bg-verde-claro { background-color: #BEFFBA; }
+.cor-verde { color: #00D218; }
+
+.bg-azul-claro { background-color: #D3D9FF; }
+.cor-azul { color: #0800FF; }
+
+.bg-roxo-claro { background-color: #E8D5FF; }
+.cor-roxo { color: #B400E2; }
+
+/* LISTA DE PACIENTES (LINHAS) */
+.card-paciente-linha {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.paciente-info-principal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.paciente-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nome-e-tag {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nome-e-tag h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.tag-tratamento {
+    background-color: #C8FFB8;
+    color: #009C1D;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.paciente-detalhes {
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+.proxima-visita {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.label-visita {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.data-visita {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.hora-visita {
+    font-size: 17px;
+    color: var(--text-muted);
+    font-weight: 500;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes - MedHome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/inicialprofissional.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo medhome com nome .png" alt="Logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="../nicolas/inicialprofissional.html
+            ">Painel</a>
+            <a href="solicitacoes.html">Solicitações</a>
+            <a href="agendaprofissional.html">Agenda</a>
+            <a href="../nicolas/pagamentoscliente.html">Pagamentos</a>
+            <a href="mensagens.html" class="nav-mensagens">Mensagens <span class="badge">4</span></a>
+            <a href="pacientes.html" class="active">Pacientes</a>
+        </nav>
+
+        <div class="perfil-header">
+            <div class="perfil-info">
+                <span class="nome">Ana Paula de Sousa</span>
+                <span class="cargo">Enfermeira</span>
+            </div>
+            <div class="avatar-header">AP</div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- CABEÇALHO E PESQUISA -->
+        <section class="page-header mt-40">
+            <div class="header-titulos">
+                <h1>Pacientes</h1>
+                <p>Gerencie e acompanhe todos os seus pacientes</p>
+            </div>
+            
+            <div class="busca-paciente">
+                <input type="text" placeholder="Buscar paciente pelo nome">
+            </div>
+        </section>
+
+        <!-- ABAS DE FILTRO -->
+        <div class="tabs-container mt-40">
+            <button class="tab-btn active">Pendentes</button>
+            <button class="tab-btn">Aceitas</button>
+            <button class="tab-btn">Recusadas</button>
+        </div>
+
+        <!-- CARDS DE MÉTRICAS -->
+        <section class="metricas-pacientes mt-40">
+            <div class="card-metrica">
+                <div class="metrica-icone bg-verde-claro cor-verde">3</div>
+                <span class="metrica-label">Em cuidado</span>
+            </div>
+
+            <div class="card-metrica">
+                <div class="metrica-icone bg-azul-claro cor-azul">2</div>
+                <span class="metrica-label">Em cuidado</span>
+            </div>
+
+            <div class="card-metrica">
+                <div class="metrica-icone bg-roxo-claro cor-roxo">11</div>
+                <span class="metrica-label">Concluídos</span>
+            </div>
+
+            <a href="#" class="card-metrica card-acao">
+                <span>Visualizar histórico de prontuários</span>
+                <span class="seta-acao">➔</span>
+            </a>
+        </section>
+
+        <!-- LISTA DE PACIENTES -->
+        <section class="lista-pacientes mt-40">
+            
+            <!-- Paciente 1 -->
+            <div class="card-paciente-linha">
+                <div class="paciente-info-principal">
+                    <div class="avatar blue">AP</div>
+                    <div class="paciente-dados">
+                        <div class="nome-e-tag">
+                            <h3>Ademir de Souza</h3>
+                            <span class="tag-tratamento">Em tratamento</span>
+                        </div>
+                        <p class="paciente-detalhes">80 anos - Administração de medicação - Idade avançada</p>
+                    </div>
+                </div>
+                
+                <div class="proxima-visita">
+                    <span class="label-visita">PRÓXIMA VISITA</span>
+                    <span class="data-visita">Hoje</span>
+                    <span class="hora-visita">18:00</span>
+                </div>
+            </div>
+
+            <!-- Paciente 2 -->
+            <div class="card-paciente-linha">
+                <div class="paciente-info-principal">
+                    <div class="avatar red">JO</div>
+                    <div class="paciente-dados">
+                        <div class="nome-e-tag">
+                            <h3>João Oliveira</h3>
+                            <span class="tag-tratamento">Em tratamento</span>
+                        </div>
+                        <p class="paciente-detalhes">45 anos - Troca de curativo</p>
+                    </div>
+                </div>
+                
+                <div class="proxima-visita">
+                    <span class="label-visita">PRÓXIMA VISITA</span>
+                    <span class="data-visita">Sex, 19</span>
+                    <span class="hora-visita">14:00</span>
+                </div>
+            </div>
+
+            <!-- Paciente 3 -->
+            <div class="card-paciente-linha">
+                <div class="paciente-info-principal">
+                    <div class="avatar green" style="background-color: #00FF4C; color: black;">PL</div>
+                    <div class="paciente-dados">
+                        <div class="nome-e-tag">
+                            <h3>Pedro Lima</h3>
+                            <span class="tag-tratamento">Em tratamento</span>
+                        </div>
+                        <p class="paciente-detalhes">30 anos - Curativo pós-cirúrgico</p>
+                    </div>
+                </div>
+                
+                <div class="proxima-visita">
+                    <span class="label-visita">PRÓXIMA VISITA</span>
+                    <span class="data-visita">Sáb, 20</span>
+                    <span class="hora-visita">11:00</span>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

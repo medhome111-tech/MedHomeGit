@@ -3,156 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedHome - Painel</title>
-
-    <link rel="stylesheet" href="css/stylee.css">
+    <title>Painel Profissional - MedHome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/inicialprofissional.css">
 </head>
-
 <body>
 
-<div class="dashboard">
-
-    <header>
-
+    <header class="header">
         <div class="logo">
-            <img src="img/logo-medhome.png" alt="Logo">
-            <h1>MedHome</h1>
+            <img src="img/logo medhome com nome .png" alt="Logo">
         </div>
+        
+        <nav class="nav-menu">
+            <a href="inicialprofissional.html" class="active">Painel</a>
+            <a href="../alvaro/solicitacoes.html">Solicitações</a>
+            <a href="../alvaro/agendaprofissional.html">Agenda</a>
+            <a href="pagamentoscliente.html">Pagamentos</a>
+            <a href="../alvaro/mensagens.html" class="nav-mensagens">Mensagens <span class="badge">2</span></a>
+            <a href="../alvaro/pacientes.html">Pacientes</a>
+        </nav>
 
-        <div class="perfil">
-
-            <div class="notifications">
-                <a href="notificaçãotelaprofissional.html"><img src="img/sino.png"></a>
+        <div class="perfil-header">
+            <div class="perfil-info">
+                <span class="nome">Ana Paula de Sousa</span>
+                <span class="cargo">Enfermeira</span>
             </div>
-
-            <div class="usuario">
-                <h2>Mauro</h2>
-                <p>Enfermeiro</p>
-            </div>
-
-            <div class="sair">
-                Sair
-            </div>
-
+            <div class="avatar-header">AP</div>
         </div>
-
     </header>
 
-    <div class="container">
+    <main class="container">
+        
+        <section class="top-section">
+            <div class="saudacao">
+                <span class="tag-painel">PAINEL PROFISSIONAL</span>
+                <p class="boa-tarde">Boa tarde</p>
+                <h1>Ana Paula de Sousa</h1>
+            </div>
+            
+            <div class="status-disponibilidade">
+                <div class="status-text" id="texto-status">
+                    <strong>Disponível</strong><br>
+                    <span>para atendimento</span>
+                </div>
+                <div class="toggle-switch active" id="btn-toggle">
+                    <div class="toggle-circle"></div>
+                </div>
+            </div>
+        </section>
 
-        <div class="boas-vindas">
-            <h2>
-                <strong>Olá, Alan!</strong>
-                Seja bem-vindo ao seu painel de atendimento.
-            </h2>
+        <section class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-icon">📊</div>
+                <div class="kpi-dados">
+                    <p>ATENDIMENTOS NO MÊS</p>
+                    <h2>34</h2>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon">⭐</div>
+                <div class="kpi-dados">
+                    <p>AVALIAÇÃO MÉDIA</p>
+                    <h2>4.9</h2>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon">✅</div>
+                <div class="kpi-dados">
+                    <p>TAXA DE ACEITAÇÃO</p>
+                    <h2>92%</h2>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            
+            <div class="col-esquerda">
+                
+                <div class="secao-titulo">
+                    <h2>Solicitações pendentes</h2>
+                </div>
+                
+                <div class="card-lista">
+                    <div class="card-topo">
+                        <div class="paciente-info">
+                            <div class="avatar red">MS</div>
+                            <div>
+                                <h3>Maria de Souza</h3>
+                                <p>Curativo pós-cirúrgico</p>
+                                <span class="data-hora"><i class="icon-clock"></i> Hoje: 18:00</span>
+                            </div>
+                        </div>
+                        <div class="preco">R$90</div>
+                    </div>
+                    <div class="botoes-acao">
+                        <button class="btn btn-aceitar" onclick="aceitarSolicitacao('Maria de Souza', this)">Aceitar</button>
+                        <button class="btn btn-recusar" onclick="recusarSolicitacao('Maria de Souza', this)">Recusar</button>
+                    </div>
+                </div>
+
+                <div class="card-lista">
+                    <div class="card-topo">
+                        <div class="paciente-info">
+                            <div class="avatar blue">JO</div>
+                            <div>
+                                <h3>João Oliveira</h3>
+                                <p>Administração de medicação</p>
+                                <span class="data-hora"><i class="icon-clock"></i> Amanhã: 18:00</span>
+                            </div>
+                        </div>
+                        <div class="preco">R$60</div>
+                    </div>
+                    <div class="botoes-acao">
+                        <button class="btn btn-aceitar" onclick="aceitarSolicitacao('João Oliveira', this)">Aceitar</button>
+                        <button class="btn btn-recusar" onclick="recusarSolicitacao('João Oliveira', this)">Recusar</button>
+                    </div>
+                </div>
+
+                <div class="secao-titulo mt-40">
+                    <h2>Mensagens recentes</h2>
+                    <a href="mensagens.html" class="link-ver-todas">Ver todas</a>
+                </div>
+
+                <div class="card-simples" style="cursor: pointer;" onclick="window.location.href='mensagens.html'">
+                    <div class="paciente-info">
+                        <div class="avatar blue">JO</div>
+                        <div>
+                            <h3>João Oliveira</h3>
+                            <p class="msg-preview">Posso confirmar a consulta?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-simples" style="cursor: pointer;" onclick="window.location.href='mensagens.html'">
+                    <div class="paciente-info">
+                        <div class="avatar red">MS</div>
+                        <div>
+                            <h3>Maria de Souza</h3>
+                            <p class="msg-preview">Qual o horário certo para o remédio?</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-direita">
+                
+                <div class="secao-titulo">
+                    <h2>Agenda de hoje</h2>
+                    <span class="data-hoje">18 de junho de 2026</span>
+                </div>
+
+                <div class="card-agenda">
+                    <div class="item-agenda border-green bg-green-light">
+                        <div class="horario">14:00 - 15:00</div>
+                        <h4>Maria de Souza</h4>
+                        <p>Administração de medicação</p>
+                    </div>
+
+                    <div class="item-agenda border-blue bg-blue-light">
+                        <div class="horario">18:00 - 19:00</div>
+                        <h4>Paulo Fonseca</h4>
+                        <p>Troca de curativo</p>
+                    </div>
+
+                    <a href="agenda.html" class="btn-outline-blue">Ver agenda completa</a>
+                </div>
+
+            </div>
         </div>
 
-        <!-- CARDS SUPERIORES -->
-        <div class="cards-top">
+    </main>
 
-            <div class="card">
+    <script>
+        const btnToggle = document.getElementById('btn-toggle');
+        const textoStatus = document.getElementById('texto-status');
 
-                <div class="icone azul">
-                    <img src="img/simbolocasinha.png" alt="Visitas">
-                </div>
+        btnToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            
+            if (this.classList.contains('active')) {
+                textoStatus.innerHTML = '<strong>Disponível</strong><br><span>para atendimento</span>';
+            } else {
+                textoStatus.innerHTML = '<strong>Indisponível</strong><br><span>no momento</span>';
+            }
+        });
 
-                <div class="conteudo-card">
-                    <h3>Minhas visitas hoje</h3>
-                    <p>
-                        <span class="numero azul-text">02</span>
-                        agendadas
-                    </p>
-                </div>
+        function aceitarSolicitacao(nomePaciente, elementoBotao) {
+            alert(`Solicitação de ${nomePaciente} aceita com sucesso! O paciente será notificado.`);
+            const card = elementoBotao.closest('.card-lista');
+            card.style.display = 'none';
+        }
 
-            </div>
-
-            <div class="card">
-
-                <div class="icone azul">
-                    <img src="img/sino.png" alt="Próximos atendimentos">
-                </div>
-
-                <div class="conteudo-card">
-                    <h3>Próximos atendimentos</h3>
-                    <p>
-                        <span class="numero azul-text">02</span>
-                        disponíveis
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <div class="icone verde">
-                    <img src="img/check 108.png" alt="Concluídos">
-                </div>
-
-                <div class="conteudo-card">
-                    <h3>Atendimentos concluídos</h3>
-                    <p>
-                        <span class="numero verde-text">01</span>
-                        concluído
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- PAINÉIS INFERIORES -->
-        <div class="cards-bottom">
-
-            <div class="painel">
-
-                <h3>Quadro de anotações</h3>
-
-                <textarea
-                    class="anotacao"
-                    placeholder="Use esse espaço para anotar o que desejar"></textarea>
-
-            </div>
-
-            <div class="painel cadastro">
-
-                <h3>Cadastro de serviço</h3>
-
-                <div class="circulo">
-                    <img src="img/coracao.png" alt="Serviço">
-                </div>
-
-                <a href="cadastroserviço.html"><button class="btn">
-                    + Cadastrar serviço
-                </button>
-                </a>
-            </div>
-
-            <div class="painel">
-
-                <div class="topo-msg">
-                    <h3>Mensagens</h3>
-                    <a href="#">Exibir todas</a>
-                </div>
-
-                <div class="mensagem">
-                    <strong>Carlos de Sousa</strong><br>
-                    Bom dia, eu preciso de uma informação...
-                    <span class="hora">Há 10 minutos</span>
-                </div>
-
-                <div class="mensagem">
-                    <strong>Ana Maria</strong><br>
-                    Com licença, gostaria de saber...
-                    <span class="hora">Há 20 minutos</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
+        function recusarSolicitacao(nomePaciente, elementoBotao) {
+            const confirmacao = confirm(`Tem certeza que deseja recusar a solicitação de ${nomePaciente}?`);
+            if (confirmacao) {
+                const card = elementoBotao.closest('.card-lista');
+                card.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

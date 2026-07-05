@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - MedHome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/inicialprofissional.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo medhome com nome .png" alt="Logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="../nicolas/inicialprofissional.html">Painel</a>
+            <a href="solicitacoes.html">Solicitações</a>
+            <a href="agendaprofissional.html" class="active">Agenda</a>
+            <a href="../nicolas/pagamentoscliente.html">Pagamentos</a>
+            <a href="mensagens.html" class="nav-mensagens">Mensagens <span class="badge">2</span></a>
+            <a href="pacientes.html">Pacientes</a>
+        </nav>
+
+        <div class="perfil-header">
+            <div class="perfil-info">
+                <span class="nome">Ana Paula de Sousa</span>
+                <span class="cargo">Enfermeira</span>
+            </div>
+            <div class="avatar-header">AP</div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- CABEÇALHO DA AGENDA -->
+        <section class="agenda-header mt-40">
+            <h1>Agenda</h1>
+            
+            <div class="agenda-controles">
+                <div class="seletor-periodo">
+                    <span class="data-atual">16 - 22 de junho</span>
+                </div>
+                
+                <div class="seletor-visualizacao">
+                    <button class="btn-vis active">Semana</button>
+                    <button class="btn-vis">Mês</button>
+                </div>
+
+                <button class="btn btn-aceitar btn-bloquear">
+                    <span class="icon-bloqueio">🔒</span> Bloquear horário
+                </button>
+            </div>
+        </section>
+
+        <!-- LAYOUT GRID: CALENDÁRIO + SIDEBAR -->
+        <div class="content-grid grid-agenda mt-40">
+            
+            <div class="col-esquerda">
+                <div class="calendario-container">
+                    
+                    <!-- Coluna de Horários -->
+                    <div class="cal-coluna cal-horas bg-light">
+                        <div class="cal-header-vazio"></div>
+                        <div class="cal-hora">08:00</div>
+                        <div class="cal-hora">09:00</div>
+                        <div class="cal-hora">10:00</div>
+                        <div class="cal-hora">11:00</div>
+                        <div class="cal-hora">12:00</div>
+                        <div class="cal-hora">13:00</div>
+                        <div class="cal-hora">14:00</div>
+                        <div class="cal-hora">15:00</div>
+                        <div class="cal-hora">16:00</div>
+                        <div class="cal-hora">17:00</div>
+                        <div class="cal-hora">18:00</div>
+                        <div class="cal-hora">19:00</div>
+                        <div class="cal-hora">20:00</div>
+                    </div>
+
+                    <!-- Segunda: 15 -->
+                    <div class="cal-coluna">
+                        <div class="cal-header">SEG<br><strong>15</strong></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                    </div>
+
+                    <!-- Terça: 16 -->
+                    <div class="cal-coluna">
+                        <div class="cal-header">TER<br><strong>16</strong></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                    </div>
+
+                    <!-- Quarta: 17 -->
+                    <div class="cal-coluna">
+                        <div class="cal-header">QUA<br><strong>17</strong></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                    </div>
+
+                    <!-- Quinta: 18 -->
+                    <div class="cal-coluna">
+                        <div class="cal-header">QUI<br><strong>18</strong></div>
+                        <div class="cal-slot"></div>
+                        
+                        <!-- SLOT DE 09:00 as 11:00 (Ocupa 2 blocos) -->
+                        <div class="cal-slot">
+                            <div class="evento-agenda duplo">
+                                <div class="paciente-info">
+                                    <div class="avatar blue" style="width: 35px; height: 35px; font-size: 14px;">AS</div>
+                                    <div>
+                                        <h3>Ademir de Souza</h3>
+                                        <p>09:00 - 11:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cal-slot"></div> <!-- Espaço debaixo preenchido visualmente -->
+                        
+                        <!-- Resto do dia -->
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                    </div>
+
+                    <!-- Sexta: 19 -->
+                    <div class="cal-coluna">
+                        <div class="cal-header">SEX<br><strong>19</strong></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                    </div>
+
+                    <!-- Sábado: 20 -->
+                    <div class="cal-coluna">
+                        <div class="cal-header">SÁB<br><strong>20</strong></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                    </div>
+
+                    <!-- Domingo: 21 -->
+                    <div class="cal-coluna">
+                        <div class="cal-header">DOM<br><strong>21</strong></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                        <div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div><div class="cal-slot"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SIDEBAR DIREITA -->
+            <div class="col-direita">
+                <div class="widget-card">
+                    <h3 class="widget-titulo mb-20 text-muted" style="font-size: 17px;">RESUMO DA SEMANA</h3>
+                    
+                    <div class="resumo-linha">
+                        <div class="resumo-label">
+                            <span class="icone-cinza">📋</span>
+                            <span>Atendimentos</span>
+                        </div>
+                        <strong>5</strong>
+                    </div>
+
+                    <div class="resumo-linha">
+                        <div class="resumo-label">
+                            <span class="icone-cinza">⏱️</span>
+                            <span>Horas agendadas</span>
+                        </div>
+                        <strong>8h</strong>
+                    </div>
+
+                    <div class="separador"></div>
+
+                    <h3 class="widget-titulo mb-20 text-muted mt-20" style="font-size: 17px;">Disponibilidade</h3>
+                    <a href="#" class="btn-acao-borda btn-borda-azul">Configurar disponibilidade</a>
+
+                    <div class="separador mt-20"></div>
+
+                    <div class="solicitacoes-alerta mt-20">
+                        <h3 class="widget-titulo" style="font-size: 17px; color: black; margin-bottom: 5px;">Solicitações pendentes</h3>
+                        <p class="text-muted" style="font-size: 13px; margin-bottom: 15px;">2 pacientes aguardando resposta</p>
+                        <a href="solicitacoes.html" class="btn-acao-borda btn-borda-preta">Ver solicitações</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

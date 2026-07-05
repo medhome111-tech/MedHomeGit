@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas - Painel do Paciente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/agendamentospasciente.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logonome.png" alt="Logo" class="logo-img">
+        </div>
+        
+        <nav class="nav-links">
+            <a href="#">Painel</a>
+            <a href="#" class="active">Consultas</a>
+            <a href="#">Solicitações</a>
+            <a href="#">Pagamentos</a>
+            <a href="mensagens.html">Mensagens</a>
+        </nav>
+
+        <div class="user-profile">
+            <div class="notifications">
+                <img src="img/sino.png" alt="Notificações" class="icon-img-circle">
+            </div>
+            <div class="divider"></div>
+            <div class="profile-info">
+                <img src="img/coroa.png" alt="Foto de perfil" class="profile-img">
+                <div class="profile-text">
+                    <span class="user-name">Ademir</span>
+                    <span class="user-role">Paciente</span>
+                </div>
+            </div>
+            <a href="#" id="btn-sair" class="logout">Sair</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Consultas</h1>
+            <p>Veja aqui as consultas agendadas por você</p>
+        </section>
+
+        <section class="tabs-container">
+            <div class="tabs">
+                <button class="tab active">Todas</button>
+                <button class="tab">Agendadas</button>
+                <button class="tab">Concluídas</button>
+                <button class="tab">Canceladas</button>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <section class="appointments-list">
+                <h2 class="date-title">Hoje - 18 de junho</h2>
+                
+                <div class="card appointment-card">
+                    <div class="card-header">
+                        <div class="provider">
+                            <div class="avatar">AS</div>
+                            <div class="provider-details">
+                                <h3>Ana Paula de Sousa</h3>
+                                <span>Enfermeira</span>
+                            </div>
+                        </div>
+                        <div class="payment-info">
+                            <span class="price">R$90</span>
+                            <span class="badge-paid">Pago</span>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="info-item">
+                            <div class="icon-box"></div>
+                            <span>Administração de medicação</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"></div>
+                            <span>21 de junho, 18:00</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"></div>
+                            <span>Rua Alfredo Pacheco - Centro</span>
+                        </div>
+                    </div>
+
+                    <div class="patient-notes">
+                        <strong>Observações do paciente:</strong> <span>Pós operatório de cesariana realizado há 3 dias</span>
+                    </div>
+
+                    <div class="card-actions">
+                        <button id="btn-detalhes" class="btn btn-primary">Ver detalhes</button>
+                        <button id="btn-mensagem" class="btn btn-secondary">
+                            <img src="img/Message circle.png" alt="Mandar Mensagem" class="icon-img-square">
+                            Mandar mensagem
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <h2 class="sidebar-title">PLANO DE CUIDADO ATIVO</h2>
+                
+                <div class="card care-plan-card">
+                    <div class="provider" style="margin-bottom: 24px;">
+                        <div class="avatar">AS</div>
+                        <div class="provider-details">
+                            <h3>Ana Paula de Sousa</h3>
+                            <span>Administração de medicação</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progresso</span>
+                            <span class="progress-count"><strong>3</strong> de 5 visitas</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                        <div class="progress-footer">
+                            <span>Início: 18/06</span>
+                        </div>
+                    </div>
+
+                    <button id="btn-plano" class="btn btn-outline">Ver plano completo</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    console.log(`Filtro selecionado: ${tab.innerText}`);
+                });
+            });
+
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+
+            const btnDetalhes = document.getElementById('btn-detalhes');
+            const btnMensagem = document.getElementById('btn-mensagem');
+            const btnPlano = document.getElementById('btn-plano');
+            const btnSair = document.getElementById('btn-sair');
+
+            btnDetalhes.addEventListener('click', () => {
+                alert('Abrindo a página com os detalhes completos desta consulta...');
+            });
+
+            btnMensagem.addEventListener('click', () => {
+                window.location.href = 'chatenfermeiro.html';
+            });
+
+            btnPlano.addEventListener('click', () => {
+                alert('Carregando o plano de cuidado ativo completo...');
+            });
+
+            btnSair.addEventListener('click', (e) => {
+                e.preventDefault();
+                const confirmar = confirm('Tem certeza que deseja sair da sua conta?');
+                if(confirmar) {
+                    window.location.href = 'login.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

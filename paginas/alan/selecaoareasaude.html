@@ -10,14 +10,15 @@
 <body>
   <header class="header">
     <div class="back-button">
-        <a href="../alvaro/paginaincialpaciente.html"><img src="img/arrowleft.png"></a>
+        <a href="../alvaro/paginaincialpaciente.html"><img src="img/arrowleft.png" alt="Voltar"></a>
     </div>
     <h1 class="title">
       De qual serviço você está precisando?
     </h1>
   </header>
+  
   <section class="services-grid">
-    <article class="service-card">
+    <article class="service-card" data-url="../alvaro/enfermeirosdisponiveis.html" style="cursor: pointer;">
       <div class="icon-circle">
         <img src="img/enfermeiroicon.png" alt="Enfermagem">
       </div>
@@ -28,7 +29,8 @@
         no conforto do lar.
       </p>
     </article>
-    <article class="service-card">
+    
+    <article class="service-card" data-url="../nicolas/fisioterapeutadisponivel.html" style="cursor: pointer;">
       <div class="icon-circle">
         <img src="img/fisioterapeutaicon.png" alt="Fisioterapia">
       </div>
@@ -38,59 +40,66 @@
         e na melhoria da qualidade de vida do paciente.
       </p>
     </article>
-    <article class="service-card">
+    
+    <article class="service-card" data-url="../alvaro/cuidadoresdisponiveis.html" style="cursor: pointer;">
       <div class="icon-circle">
         <img src="img/cuidadoricon.png" alt="Cuidador">
       </div>
-
       <h2 class="service-title">Cuidador</h2>
-
       <p class="service-description">
         Serviço de cuidados em domicílio, com foco no suporte diário
         e no bem-estar do paciente.
       </p>
     </article>
 
-    <article class="service-card">
+    <article class="service-card" data-url="personaisdisponiveis.html" style="cursor: pointer;">
       <div class="icon-circle">
         <img src="img/personalicon.png" alt="Personal">
       </div>
-
       <h2 class="service-title">Personal</h2>
-
       <p class="service-description">
         Acompanhamento personalizado para exercícios físicos,
         condicionamento e promoção da saúde no ambiente domiciliar.
       </p>
     </article>
 
-    <article class="service-card">
+    <article class="service-card" data-url="../nicolas/nutridisponivel.html" style="cursor: pointer;">
       <div class="icon-circle">
         <img src="img/nutricionistaicon.png" alt="Nutrição">
       </div>
-
       <h2 class="service-title">Nutrição</h2>
-
       <p class="service-description">
         Serviço de nutrição em domicílio. Ideal para acompanhamento
         de dietas e promoção de hábitos alimentares saudáveis.
       </p>
     </article>
 
-    <article class="service-card">
+    <article class="service-card" data-url="translado.html" style="cursor: pointer;">
       <div class="icon-circle">
         <img src="img/transladoicon.png" alt="Translado">
       </div>
-
       <h2 class="service-title">Translado</h2>
-
       <p class="service-description">
         Serviço de transporte assistido para pacientes que necessitam
         deslocamento até hospitais, clínicas ou centros de saúde.
       </p>
     </article>
-
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.service-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const urlDestino = card.getAttribute('data-url');
+                
+                if (urlDestino) {
+                    window.location.href = urlDestino;
+                }
+            });
+        });
+    });
+  </script>
 </body>
 </html>
