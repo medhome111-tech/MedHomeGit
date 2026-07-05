@@ -15,10 +15,10 @@ body{
     max-width:1200px;
     margin:auto;
 }
-.titulo-area {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.titulo-area{
+margin: 0;
+position: relative;
+left: -5px;
 }
 .card{
     background:#fff;
