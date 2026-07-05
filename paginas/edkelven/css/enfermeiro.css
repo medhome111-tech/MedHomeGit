@@ -16,21 +16,17 @@ body{
     margin:auto;
 }
 .titulo-area{
-    width:1200px;
-    max-width:100%;
-    margin:0 auto 20px auto;
+    max-width:1200px;
+    margin:30px auto;
 }
+
 .voltar{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:45px;
-    height:45px;
+    display:inline-block;
 }
 
 .voltar img{
-    width:30px;
-    height:30px;
+    width:42px;
+    height:42px;
     display:block;
 }
 .card{
