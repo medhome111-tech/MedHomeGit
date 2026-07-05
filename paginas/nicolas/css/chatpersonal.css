@@ -8,6 +8,7 @@ body{
     font-family:'Roboto',sans-serif;
     background:#F3F4F6;
     height:100vh;
+    color:#111827;
 }
 
 .chat-container{
@@ -54,6 +55,8 @@ body{
     outline:none;
     width:100%;
     font-size:15px;
+    font-family:'Inter',sans-serif;
+    background:transparent;
 }
 
 .filtros{
@@ -70,6 +73,12 @@ body{
     padding:8px 16px;
     cursor:pointer;
     font-size:14px;
+    font-family:'Inter',sans-serif;
+    transition:.3s;
+}
+
+.filtros button:hover{
+    background:#F3F4F6;
 }
 
 .filtros .ativo{
@@ -85,6 +94,10 @@ body{
     background:#147AFF;
     color:#FFF;
     border:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
 }
 
 .lista-conversas{
@@ -120,11 +133,14 @@ body{
 .conversa h4{
     font-size:16px;
     font-family:'Inter',sans-serif;
+    font-weight:600;
+    color:#111827;
 }
 
 .conversa p{
     color:#777;
     font-size:14px;
+    margin-top:3px;
 }
 
 .chat{
@@ -152,10 +168,14 @@ body{
 
 .chat-header h2{
     font-size:24px;
+    font-family:'Roboto',sans-serif;
+    font-weight:700;
+    color:#111827;
 }
 
 .chat-header span{
     color:#666;
+    font-size:16px;
 }
 
 .chat-body{
@@ -165,6 +185,7 @@ body{
     display:flex;
     flex-direction:column;
     gap:20px;
+    background:#F3F4F6;
 }
 
 .mensagem{
@@ -172,6 +193,7 @@ body{
     padding:14px 18px;
     border-radius:15px;
     position:relative;
+    font-size:15px;
 }
 
 .mensagem p{
@@ -217,6 +239,15 @@ body{
     background:#EAEAEA;
     cursor:pointer;
     font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#444;
+    transition:.3s;
+}
+
+.anexo:hover{
+    background:#DCDCDC;
 }
 
 .chat-footer input{
@@ -226,6 +257,12 @@ body{
     padding:13px 20px;
     outline:none;
     font-size:15px;
+    font-family:'Inter',sans-serif;
+    background:#FFF;
+}
+
+.chat-footer input:focus{
+    border-color:#147AFF;
 }
 
 .enviar{
@@ -236,16 +273,16 @@ body{
     padding:12px 24px;
     cursor:pointer;
     font-size:15px;
-    font-weight:bold;
+    font-weight:700;
+    font-family:'Roboto',sans-serif;
     transition:.3s;
+    display:flex;
+    align-items:center;
+    gap:8px;
 }
 
 .enviar:hover{
     background:#005DE0;
-}
-
-.enviar i{
-    margin-right:8px;
 }
 
 @media (max-width:900px){
@@ -283,12 +320,31 @@ body{
         padding:15px;
     }
 
+    .chat-header img{
+        width:50px;
+        height:50px;
+    }
+
+    .chat-header h2{
+        font-size:18px;
+    }
+
+    .chat-header span{
+        font-size:14px;
+    }
+
     .chat-body{
         padding:15px;
     }
 
     .chat-footer{
         padding:12px;
+        gap:10px;
+    }
+
+    .anexo{
+        width:42px;
+        height:42px;
     }
 
     .enviar{

@@ -13,7 +13,6 @@ body{
     align-items:center;
 }
 
-/* Container principal */
 .container{
     width:1200px;
     height:580px;
@@ -27,7 +26,6 @@ body{
         0 6px 20px rgba(0,0,0,0.12);
 }
 
-/* Painel Azul */
 .left{
     width:50%;
     background:#5260F7;
@@ -58,7 +56,6 @@ body{
     font-weight:400;
 }
 
-/* Painel Branco */
 .right{
     width:50%;
     padding:70px 60px;
@@ -110,7 +107,6 @@ body{
     color:#9b9b9b;
 }
 
-/* Esqueceu senha */
 .forgot{
     text-align:right;
     margin-top:-5px;
@@ -124,7 +120,6 @@ body{
     font-weight:600;
 }
 
-/* Botão */
 .btn-login{
     width:100%;
     height:40px;
@@ -146,7 +141,6 @@ body{
     opacity:.9;
 }
 
-/* Cadastro */
 .register{
     margin-top:18px;
     text-align:center;
@@ -161,7 +155,6 @@ body{
     font-weight:600;
 }
 
-/* Responsivo */
 @media (max-width: 900px){
 
     .container{

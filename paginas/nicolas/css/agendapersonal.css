@@ -1,0 +1,390 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family:'Roboto',sans-serif;
+    background:#EFEFEF;
+    color:#111827;
+}
+
+button,
+textarea{
+    font-family:inherit;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:100%;
+    max-width:1060px;
+    margin:0 auto;
+    padding:58px 0 40px;
+    display:grid;
+    grid-template-columns:495px 438px;
+    gap:120px;
+    align-items:start;
+}
+
+.cabecalho{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:42px;
+}
+
+.voltar{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:#FFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#111827;
+    font-size:18px;
+    box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+
+.cabecalho h1{
+    font-family:'Inter',sans-serif;
+    font-size:21px;
+    font-weight:700;
+}
+
+.grupo{
+    margin-bottom:27px;
+}
+
+.grupo h2{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:13px;
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    font-weight:700;
+    color:#111827;
+}
+
+.grupo h2 i{
+    font-size:16px;
+    color:#111827;
+}
+
+.servicos{
+    display:grid;
+    grid-template-columns:repeat(2, 200px);
+    gap:13px;
+}
+
+.card-servico{
+    height:113px;
+    padding:14px 12px;
+    background:#FFF;
+    border:1px solid #CFCFCF;
+    border-radius:8px;
+    text-align:center;
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card-servico strong{
+    display:block;
+    margin-bottom:7px;
+    font-family:'Inter',sans-serif;
+    font-size:10px;
+    font-weight:700;
+    color:#111827;
+}
+
+.card-servico span{
+    display:block;
+    width:100%;
+    max-width:150px;
+    margin:0 auto;
+    font-size:9px;
+    line-height:1.35;
+    color:#444;
+}
+
+.card-servico:hover,
+.card-servico.ativo{
+    border-color:#147AFF;
+    background:#F7FBFF;
+}
+
+.tipo-atendimento{
+    display:grid;
+    grid-template-columns:200px 200px;
+    gap:13px;
+}
+
+.tipo-atendimento button{
+    height:42px;
+    background:#FFF;
+    border:1px solid #CFCFCF;
+    border-radius:8px;
+    font-size:10px;
+    color:#111827;
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+}
+
+.datas{
+    display:flex;
+    gap:10px;
+}
+
+.datas button{
+    width:51px;
+    height:51px;
+    background:#FFF;
+    border:1px solid #CFCFCF;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+}
+
+.datas span{
+    font-size:8px;
+    font-weight:500;
+    color:#777;
+}
+
+.datas strong{
+    margin-top:3px;
+    font-size:12px;
+    font-weight:500;
+    color:#111827;
+}
+
+.horarios{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+.horarios button{
+    width:64px;
+    height:34px;
+    background:#FFF;
+    border:1px solid #CFCFCF;
+    border-radius:18px;
+    color:#111827;
+    font-size:10px;
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+}
+
+.campo-endereco{
+    width:495px;
+    height:40px;
+    background:#FFF;
+    border:1px solid #CFCFCF;
+    border-radius:8px;
+    padding:0 13px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:#111827;
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+}
+
+.campo-endereco span{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:10px;
+}
+
+.campo-endereco i{
+    font-size:10px;
+}
+
+textarea{
+    width:495px;
+    height:165px;
+    background:#FFF;
+    border:1px solid #CFCFCF;
+    border-radius:8px;
+    padding:15px;
+    resize:none;
+    outline:none;
+    font-size:10px;
+    color:#111827;
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+}
+
+textarea::placeholder{
+    color:#777;
+}
+
+.resumo{
+    margin-top:85px;
+}
+
+.card-resumo{
+    width:438px;
+    background:#FFF;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+
+.topo-resumo{
+    height:134px;
+    background:#BFD9FF;
+    padding:0 36px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.avatar{
+    width:53px;
+    height:53px;
+    border-radius:50%;
+    background:#001EFF;
+    color:#FFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    font-weight:700;
+}
+
+.topo-resumo h3{
+    font-family:'Inter',sans-serif;
+    font-size:14px;
+    font-weight:700;
+    color:#111827;
+}
+
+.topo-resumo p{
+    margin-top:4px;
+    font-size:10px;
+    color:#374151;
+}
+
+.detalhes{
+    padding:24px 42px 17px;
+    border-bottom:1px solid #D9D9D9;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.detalhes div,
+.total{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.detalhes span,
+.total span{
+    font-size:10px;
+    color:#6B7280;
+}
+
+.detalhes strong,
+.total strong{
+    font-size:10px;
+    font-weight:700;
+    color:#111827;
+}
+
+.total{
+    padding:22px 42px 17px;
+}
+
+.btn-continuar{
+    width:160px;
+    height:37px;
+    display:block;
+    margin:0 auto 27px;
+    background:#147AFF;
+    color:#FFF;
+    border-radius:8px;
+    font-size:10px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-continuar:hover{
+    background:#005DE0;
+}
+
+.aviso{
+    margin-top:17px;
+    text-align:center;
+    color:#777;
+    font-size:10px;
+}
+
+@media(max-width:1050px){
+
+    .container{
+        max-width:92%;
+        grid-template-columns:1fr;
+        gap:30px;
+        padding-top:35px;
+    }
+
+    .resumo{
+        margin-top:0;
+    }
+
+    .card-resumo,
+    .campo-endereco,
+    textarea{
+        width:100%;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .container{
+        padding:25px 0;
+    }
+
+    .servicos,
+    .tipo-atendimento{
+        grid-template-columns:1fr;
+    }
+
+    .card-servico,
+    .tipo-atendimento button{
+        width:100%;
+    }
+
+    .horarios button{
+        width:calc(33.33% - 9px);
+    }
+
+    .topo-resumo{
+        padding:0 24px;
+    }
+
+    .detalhes,
+    .total{
+        padding-left:24px;
+        padding-right:24px;
+    }
+
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedHome - Pagamentos</title>
+
+    <link rel="stylesheet" href="css/telapagamentos.css">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="img/logo medhome com nome .png" alt="MedHome">
+        </div>
+
+        <div class="painel-profissional">
+            <span class="status"></span>
+            <span>PAINEL PROFISSIONAL</span>
+        </div>
+
+        <nav>
+
+            <a href="#">Painel</a>
+
+            <a href="#">Solicitações</a>
+
+            <a href="#">Agenda</a>
+
+            <a href="#" class="ativo">Pagamentos</a>
+
+            <a href="#">Mensagens</a>
+
+            <a href="#">Pacientes</a>
+
+        </nav>
+
+        <div class="usuario">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <div class="avatar">
+                AP
+            </div>
+
+            <div class="info">
+
+                <h3>Ana Paula de Sousa</h3>
+
+                <span>Enfermeira</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- CONTEÚDO -->
+
+    <main class="container">
+
+        <section class="titulo">
+
+            <h1>Pagamentos</h1>
+
+            <p>Acompanhe seus recebimentos e saldo</p>
+
+        </section>
+
+        <!-- Cards -->
+
+        <section class="cards">
+
+            <div class="card saldo">
+
+                <p>Saldo disponível</p>
+
+                <h2>R$ 612,00</h2>
+
+                <span>Disponível para saque</span>
+
+            </div>
+
+            <div class="card receber">
+
+                <div class="icone">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <p>A receber</p>
+
+                <h2>R$ 184,00</h2>
+
+                <span>2 consultas pendentes</span>
+
+            </div>
+
+        </section>
+
+        <section class="filtros">
+
+            <button class="ativo">Todas</button>
+
+            <button>Pendentes</button>
+
+            <button>Pagas</button>
+
+        </section>
+
+        <section class="conteudo">
+
+
+            <div class="lista">
+
+                <div class="pagamento">
+
+                    <div class="paciente">
+
+                        <div class="avatar azul">
+                            MS
+                        </div>
+
+                        <div>
+
+                            <h3>Maria Souza</h3>
+
+                            <span>Troca de curativo - 20/06</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="status-pagamento pago">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Pago
+
+                    </div>
+
+                    <h3 class="valor">
+                        R$83,00
+                    </h3>
+
+                </div>
+
+                <div class="pagamento">
+
+                    <div class="paciente">
+
+                        <div class="avatar verde">
+                            DS
+                        </div>
+
+                        <div>
+
+                            <h3>Daniel Santos</h3>
+
+                            <span>Troca de curativo - 15/06</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="status-pagamento pago">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Pago
+
+                    </div>
+
+                    <h3 class="valor">
+                        R$75,00
+                    </h3>
+
+                </div>
+
+                <div class="pagamento">
+
+                    <div class="paciente">
+
+                        <div class="avatar vermelho">
+                            DS
+                        </div>
+
+                        <div>
+
+                            <h3>Daniela Santos</h3>
+
+                            <span>Troca de curativo - 11/06</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="status-pagamento pago">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Pago
+
+                    </div>
+
+                    <h3 class="valor">
+                        R$76,00
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <aside class="sidebar">
+
+                <h2>
+                    Conta para recebimento
+                </h2>
+
+                <div class="conta">
+
+                    <img src="img/telabanco.png" alt="Banco Inter">
+
+                    <div>
+
+                        <h3>Banco Inter</h3>
+
+                        <span>Ag 0001 - Conta **** 9213</span>
+
+                    </div>
+
+                </div>
+
+                <button class="alterar">
+
+                    Alterar conta
+
+                </button>
+
+                <button class="relatorio">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Baixar relatório mensal
+
+                </button>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
