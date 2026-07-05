@@ -16,9 +16,22 @@ body{
     margin:auto;
 }
 .titulo-area{
-margin: 0;
-position: relative;
-left: -5px;
+    width:1200px;
+    max-width:100%;
+    margin:0 auto 20px auto;
+}
+.voltar{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:45px;
+    height:45px;
+}
+
+.voltar img{
+    width:30px;
+    height:30px;
+    display:block;
 }
 .card{
     background:#fff;
