@@ -136,5 +136,85 @@
 
 </main>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. FUNCIONALIDADE DA BARRA DE PESQUISA
+    const inputBusca = document.querySelector('.barra-pesquisa input');
+    const cards = document.querySelectorAll('.card');
+
+    inputBusca.addEventListener('input', (e) => {
+        const termo = e.target.value.toLowerCase();
+
+        cards.forEach(card => {
+            const nome = card.querySelector('h2').innerText.toLowerCase();
+            const especialidade = card.querySelector('.especialidade').innerText.toLowerCase();
+
+            if (nome.includes(termo) || especialidade.includes(termo)) {
+                card.style.display = ''; 
+            } else {
+                card.style.display = 'none'; 
+            }
+        });
+    });
+
+    // 2. BOTÃO DE FAVORITAR (Coração)
+    const botoesFavorito = document.querySelectorAll('.favorito');
+    
+    botoesFavorito.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            
+            if (this.innerText === '♡') {
+                this.innerText = '♥';
+                this.style.color = '#ef4444'; 
+                this.style.transform = 'scale(1.2)'; 
+                this.style.transition = 'transform 0.2s ease';
+            } else {
+                this.innerText = '♡';
+                this.style.color = ''; 
+                this.style.transform = 'scale(1)';
+            }
+        });
+    });
+
+    // 3. BOTÕES DE AÇÃO (Ver Perfil e Contratar) - Agora funcionando!
+    const botoesPerfil = document.querySelectorAll('.perfil');
+    const botoesContratar = document.querySelectorAll('.contratar');
+
+    botoesPerfil.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Redireciona o usuário para a página de perfil
+            window.location.href = 'visaoperfilcuidador.html';
+        });
+    });
+
+    botoesContratar.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Redireciona o usuário para a página de agendamento que você criou antes
+            window.location.href = 'agendacuidador.html'; 
+            
+            // *NOTA: Se o seu arquivo de agendamento tiver outro nome (ex: agendacuidador.html),
+            // mude o texto 'agendamento.html' ali em cima para o nome correto do arquivo.
+        });
+    });
+
+    // 4. BOTÕES DE FILTRO
+    const botoesFiltro = document.querySelectorAll('.filtro-btn');
+    
+    botoesFiltro.forEach(btn => {
+        btn.addEventListener('click', function() {
+            botoesFiltro.forEach(b => {
+                b.style.opacity = '1';
+                b.style.fontWeight = 'normal';
+            });
+
+            this.style.fontWeight = 'bold';
+            this.style.opacity = '0.7';
+        });
+    });
+
+});
+</script>
 </body>
 </html>

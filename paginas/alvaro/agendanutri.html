@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendar Visita | MedHome</title>
-    <link rel="stylesheet" href="css/agendaenfemeiro.css">
+    <link rel="stylesheet" href="css/agendacuidador.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -107,8 +107,8 @@
 
         <aside class="resumo">
             <div class="card-profissional">
-                <img src="img/nutricionista.jpg" alt="Nutricionista">
-                <h2>Ana paula de sousa</h2>
+                <img src="../nicolas/img/mulher nutri.png" alt="Nutricionista">
+                <h2>Ana Matos</h2>
                 <span>Nutricionista</span>
                 <div class="avaliacao">
                     <i class="fa-solid fa-star"></i>
@@ -136,51 +136,64 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const btnVoltar = document.querySelector('.voltar');
-            btnVoltar.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.history.back();
-            });
+     document.addEventListener("DOMContentLoaded", () => {
+    // 1. Lógica do botão Voltar (agora declarada apenas uma vez)
+    const btnVoltar = document.querySelector('.voltar');
+    if (btnVoltar) {
+        btnVoltar.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.history.back();
+        });
+    }
 
-            function ativarExclusivo(seletor) {
-                const elementos = document.querySelectorAll(seletor);
-                elementos.forEach(elemento => {
-                    elemento.addEventListener('click', () => {
-                        elementos.forEach(e => e.classList.remove('ativo'));
-                        elemento.classList.add('ativo');
-                    });
-                });
-            }
-
-            ativarExclusivo('.servicos .card-servico');
-            ativarExclusivo('.tipo button');
-            ativarExclusivo('.datas button');
-            ativarExclusivo('.horarios button');
-
-            const botoesData = document.querySelectorAll('.datas button');
-            const botoesHorario = document.querySelectorAll('.horarios button');
-            const resumoData = document.querySelector('.info div:nth-child(1) strong');
-            const resumoHorario = document.querySelector('.info div:nth-child(2) strong');
-
-            botoesData.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const dia = btn.querySelector('strong').innerText;
-                    resumoData.innerText = dia + '/06'; 
-                });
-            });
-
-            botoesHorario.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    resumoHorario.innerText = btn.innerText;
-                });
-            });
-
-            const btnContinuar = document.querySelector('.btn-continuar');
-            btnContinuar.addEventListener('click', () => {
-                alert(`Agendamento pré-confirmado para o dia ${resumoData.innerText} às ${resumoHorario.innerText}.`);
+    // 2. Função reutilizável para alternar a classe 'ativo'
+    function ativarExclusivo(seletor) {
+        const elementos = document.querySelectorAll(seletor);
+        elementos.forEach(elemento => {
+            elemento.addEventListener('click', () => {
+                elementos.forEach(e => e.classList.remove('ativo'));
+                elemento.classList.add('ativo');
             });
         });
+    }
+
+    ativarExclusivo('.servicos .card-servico');
+    ativarExclusivo('.tipo button');
+    ativarExclusivo('.datas button');
+    ativarExclusivo('.horarios button');
+
+    // 3. Atualização dinâmica do Resumo
+    const botoesData = document.querySelectorAll('.datas button');
+    const botoesHorario = document.querySelectorAll('.horarios button');
+    const resumoData = document.querySelector('.info div:nth-child(1) strong');
+    const resumoHorario = document.querySelector('.info div:nth-child(2) strong');
+
+    // Pegando o mês atual dinamicamente (formato: 07, 08, etc)
+    const mesAtual = String(new Date().getMonth() + 1).padStart(2, '0');
+
+    botoesData.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const dia = btn.querySelector('strong').innerText;
+            // Atualiza usando o mês atual ao invés de fixar '/06'
+            resumoData.innerText = `${dia}/${mesAtual}`; 
+        });
+    });
+
+    botoesHorario.forEach(btn => {
+        btn.addEventListener('click', () => {
+            resumoHorario.innerText = btn.innerText;
+        });
+    });
+
+    // 4. Ação do botão Continuar
+    const btnContinuar = document.querySelector('.btn-continuar');
+    if(btnContinuar) {
+        btnContinuar.addEventListener('click', () => {
+            // Em um cenário real, aqui você capturaria todos os dados selecionados (serviço, tipo, endereço)
+            alert(`Agendamento pré-confirmado para o dia ${resumoData.innerText} às ${resumoHorario.innerText}.`);
+        });
+    }
+});
     </script>
 </body>
 </html>
