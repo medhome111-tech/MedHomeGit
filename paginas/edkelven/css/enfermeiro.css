@@ -17,7 +17,7 @@ body{
 }
 .titulo-area{
 margin: 0;
-position: relative;
+position: absolute;
 left: -5px;
 }
 .card{
