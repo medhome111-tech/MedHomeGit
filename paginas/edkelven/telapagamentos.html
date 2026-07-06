@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedHome - Pagamentos</title>
+    <link rel="stylesheet" href="css/telapagamentos.css">
+</head>
+<body>
+
+    <header class="main_header">
+        <div class="c_logo_cabeca">
+            <a href="../alan/paginainicialpaciente.html"><img src="img/logo nome 2.png" alt="Logo MedHome" class="cabeca_logo"></a>
+        </div>
+        <nav class="cabeca_nav">
+            <a href="../alan/paginainicialpaciente.html">Painel</a>
+            <a href="../alan/listaconsultaspaciente.html">Consultas</a>
+            <a href="../alan/solicitacoespaciente.html">Solicitações</a>
+            <a href="" class="nav_ativo">Pagamentos</a>
+            <a href="../nicolas/chatpaciente.html">Mensagens</a>
+        </nav>
+        <div class="cabeca_perfil">
+            <button class="botao_notificacao">
+                <a href="../alan/notificacoespaciente.html"><img src="img/sino.png" alt="Notificações"></a>
+            </button>
+                <div class="perfil_user">
+                    <a href="../alan/perfilpaciente.html"><img src="img/imagem.png" alt="Ademir" class="perfil_avatar"></a>
+                    <div>
+                        <h4 class="user_nome">Ademir</h4>
+                        <p class="user_paciente">Paciente</p>
+                    </div>
+                </div>
+            <a href="../alvaro/login.html" class="botao_sair">Sair</a>
+        </div>
+    </header>
+
+    <main class="dashboard_container">
+        
+        <header class="cabeca_conteudo">
+            <h1 class="pagina_titulo">Pagamentos</h1>
+            <p class="pagina_subtitulo">Acompanhe os pagamentos realizados por você</p>
+        </header>
+
+        <div class="filtro_abas">
+            <button class="aba_item aba_ativo">Todas</button>
+            <button class="aba_item">Pagos</button>
+            <button class="aba_item">Agendados</button>
+        </div>
+
+        <div class="dashboard_grid">
+            
+            <section class="coluna_pagamentos">
+                
+                <article class="card_pagamento">
+                    <div class="pagamento_principal">
+                        <div class="avatar_iniciais">AS</div>
+                        <div class="pagamento_info">
+                            <h3 class="medico_nome">Ana Paula de Sousa</h3>
+                            <p class="medico_especialidade">Enfermeira</p>
+                        </div>
+                        <span class="status_badge badge_pago">Pago</span>
+                        <div class="pagamento_valor">R$90</div>
+                    </div>
+                    <ul class="pagamento_detalhes">
+                        <li><img src="img/icon_fechar.png" alt="Procedimento"> Administração de medicação</li>
+                        <li><img src="img/relogio_2.png" alt="Data"> 21 de junho, 18:00</li>
+                        <li><img src="img/icon_local.png" alt="Local"> Rua Alfredo Pacheco - Centro</li>
+                    </ul>
+                </article>
+
+                <article class="card_pagamento">
+                    <div class="pagamento_principal">
+                        <div class="avatar_iniciais">AS</div>
+                        <div class="pagamento_info">
+                            <h3 class="medico_nome">Ana Paula de Sousa</h3>
+                            <p class="medico_especialidade">Enfermeira</p>
+                        </div>
+                        <span class="status_badge badge_cobrar">A cobrar</span>
+                        <div class="pagamento_valor">R$120</div>
+                    </div>
+                    <ul class="pagamento_detalhes">
+                        <li><img src="img/icon_fechar.png" alt="Procedimento"> Administração de medicação</li>
+                        <li><img src="img/relogio_2.png" alt="Data"> 21 de junho, 18:00</li>
+                        <li><img src="img/icon_local.png" alt="Local"> Rua Alfredo Pacheco - Centro</li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <aside class="coluna_sidebar">
+                <div class="card_sidebar">
+                    <div class="sidebar_header">
+                        <h2 class="sidebar_title">MÉTODOS DE PAGAMENTO</h2>
+                        <button class="botao_adicionar">+ Adicionar</button>
+                    </div>
+
+                    <div class="metodo_pix_box">
+                        <div class="pix_header">
+                            <div class="pix_titulo_container">
+                                <img src="img/qrcode.png" alt="Pix">
+                                <h3 class="pix_titulo">Pix</h3>
+                            </div>
+                            <span class="status_badge badge_padrao">Padrão</span>
+                        </div>
+                        <p class="pix_cpf">CPF: 123.456.789-10</p>
+                    </div>
+
+                    <button class="botao_gerenciar">Gerenciar cartões</button>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
