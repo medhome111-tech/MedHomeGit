@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Fundo suave para destacar os blocos brancos */
+    color: black;
+}
+
+/* =========================================
+   HEADER & NAVIGATION (Flexbox)
+========================================= */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: white;
+    border-bottom: 1px solid #8D8D8D;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.25);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.badge {
+    background: rgba(62.52, 255, 84.98, 0.50);
+    color: #52B445;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main-nav a.active {
+    background-color: #B4BBFF;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: rgba(0, 0, 0, 0.60);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar-circle {
+    background: #0016FF;
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user-role {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+/* =========================================
+   MAIN LAYOUT (Flexbox)
+========================================= */
+.dashboard {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Container Principal da Agenda */
+.agenda-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.agenda-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.agenda-header h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.agenda-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.date-range, .view-toggles {
+    background: #EAEAEA;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    gap: 10px;
+}
+
+.view-toggles button {
+    background: transparent;
+    border: none;
+    color: rgba(0,0,0,0.5);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.view-toggles button.active {
+    background: white;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+.btn-primary {
+    background: #0016FF;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* =========================================
+   CALENDAR GRID (Flexbox)
+========================================= */
+.calendar {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(212, 212, 212, 0.5);
+    border-left: 1px solid rgba(212, 212, 212, 0.5);
+    background: white;
+}
+
+.calendar-days-header {
+    display: flex;
+}
+
+.time-spacer {
+    width: 83px;
+    background: white;
+    border-right: 1px solid rgba(212, 212, 212, 0.5);
+    border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+}
+
+.day-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    border-right: 1px solid rgba(212, 212, 212, 0.5);
+    border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+}
+
+.day-col span {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.day-col strong {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.calendar-body {
+    display: flex;
+}
+
+.times-col {
+    width: 83px;
+    background: #EDEDED;
+    display: flex;
+    flex-direction: column;
+}
+
+.time-slot {
+    height: 95px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.5);
+    border-right: 1px solid rgba(212, 212, 212, 0.5);
+    border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+}
+
+.day-slots {
+    flex: 1;
+    display: flex;
+}
+
+.day-col-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(212, 212, 212, 0.5);
+    /* Background linear para simular as linhas horizontais nativamente */
+    background-size: 100% 95px;
+    background-image: linear-gradient(to bottom, rgba(212, 212, 212, 0.5) 1px, transparent 1px);
+}
+
+.relative {
+    position: relative;
+}
+
+/* Card de Agendamento */
+.appointment-card {
+    position: absolute;
+    top: 95px; /* Início às 09:00 */
+    left: 5%;
+    right: 5%;
+    height: 188px; /* Duração do agendamento */
+    background: #D8FFDE;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.appointment-strip {
+    width: 14px;
+    background: #24DA00;
+}
+
+.appointment-content {
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.patient-avatar {
+    width: 35px;
+    height: 35px;
+    background: #0016FF;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+}
+
+.appointment-time {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.50);
+    margin-top: 2px;
+}
+
+/* =========================================
+   SIDEBAR (Flexbox)
+========================================= */
+.sidebar {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-title {
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.60);
+    margin-top: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-label {
+    font-size: 17px;
+    color: rgba(0,0,0,0.6);
+}
+
+.summary-value {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.outline-blue {
+    border: 1px solid #0015FF;
+    align-items: center;
+    justify-content: center;
+}
+
+.outline-black {
+    border: 1px solid black;
+    padding-top: 15px;
+}
+
+.link-blue {
+    color: #0016FF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.link-black {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.sub-text {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.60);
+}

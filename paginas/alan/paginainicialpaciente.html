@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Atendimento Domiciliar</title>
+    <link rel="stylesheet" href="css/paginainicialpaciente.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <img class="logo" src="img/logonome-medhome.png" height="75px">
+
+            <nav class="nav-menu">
+                <a href="#" class="active">Painel</a>
+                <a href="listaconsultaspaciente.html">Consultas</a>
+                <a href="solicitacoespaciente.html">Solicitações</a>
+                <a href="">Pagamentos</a>
+                <a href="../nicolas/chatpaciente.html">Mensagens</a>
+            </nav>
+
+            <div class="user-actions">
+                <div class="notification-icon">
+                    <div class="icon-circle"></div>
+                </div>
+                <div class="divider"></div>
+                <a href="notificacoespaciente.html" style="text-decoration: none;">
+                    <div class="user-profile">
+                        <img class="avatar" src="img/idoso.png" height="75px">
+                        <div class="user-info">
+                            <span class="user-name">Ademir</span>
+                            <span class="user-role">Paciente</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="../alvaro/login.html" class="logout-btn">Sair</a>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <main class="content-left">
+                <section class="welcome-section">
+                    <h1>Olá, Maria!</h1>
+                    <p>Seja bem-vinda ao seu sistema de atendimento domiciliar</p>
+                </section>
+
+                    <section class="quick-actions">
+                        <div class="action-card">
+                            <div class="card-icon icon-blue">
+                                <a href="selecaoareasaude.html"><img src="img/simbolocalendario.png"></a>
+                            </div>
+                            <div class="card-text">
+                                <h2>Agendar consulta</h2>
+                                <p>Marque um atendimento domiciliar</p>
+                            </div>
+                        </div>
+                <div class="action-card">
+                    <div class="card-icon icon-red">
+                        <a href="listaconsultaspaciente.html"><img src="img/coracao.png"></a>
+                    </div>
+                    <div class="card-text">
+                        <h2>Ver minhas consultas</h2>
+                        <p>Acompanhe as consultas agendadas</p>
+                    </div>
+                </div>
+                </section>
+
+                <section class="find-professional">
+                    <h2>Encontre um profissional:</h2>
+                    <div class="professional-grid">
+                        <div class="prof-category">
+                            <a href="../alvaro/enfermeirosdisponiveis.html"><img src="img/enfermeiroicon.png" alt="Enfermagem" height="100px"></a>
+                            <span>Enfermagem</span>
+                        </div>
+                        <div class="prof-category">
+                            <a href="../nicolas/nutridisponivel.html"><img src="img/nutricionistaicon.png" alt="Nutrição" height="100px"></a>
+                            <span>Nutrição</span>
+                        </div>
+                        <div class="prof-category">
+                            <a href="../nicolas/fisioterapeutadisponivel.html"><img src="img/fisioterapeutaicon.png" alt="Fisioterapia" height="100px"></a>
+                            <span>Fisioterapia</span>
+                        </div>
+                        <div class="prof-category">
+                            <a href="personaisdisponiveis.html"><img src="img/personalicon.png" alt="Personal" height="100px"></a>
+                            <span>Personal</span>
+                        </div>
+                        <div class="prof-category">
+                            <a href="../alvaro/cuidadoresdisponiveis.html"><img src="img/cuidadoricon.png" alt="Cuidador" height="100px"></a>
+                            <span>Cuidador</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary full-width">Exibir mais detalhes</button>
+                </section>
+            </main>
+
+            <aside class="sidebar-right">
+                <section class="sidebar-card">
+                    <h2 class="sidebar-title">Consulta mais recente</h2>
+                    <div class="recent-consult-profile">
+                        <img class="avatar-large" src="img/iconebusto.png" alt="Avatar Ana de Sousa" />
+                        <div class="user-info">
+                            <span class="user-name">Ana de Sousa</span>
+                            <span class="user-role">Enfermeira</span>
+                        </div>
+                    </div>
+                    <div class="consult-date">
+                        <span class="date-text">Terça-feira, 20 de abril - 16:00hs</span>
+                    </div>
+                    <button class="btn-primary">Visualizar</button>
+                </section>
+
+                <section class="sidebar-card">
+                    <h2 class="sidebar-title">Dicas:</h2>
+                    <h3 class="tip-title">10 dicas sobre alimentação saudável</h3>
+                    <p class="tip-desc">Confira nossas dicas para melhorar a sua alimentação!</p>
+                    <button class="btn-primary mt-auto">Ver mais</button>
+                </section>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitações</title>
+    <link rel="stylesheet" href="css/solicitacoesprofissional.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="img/logonome-medhome.png" alt="Logo" class="logo" height="75px">
+            <div class="badge-pro">
+                <span class="dot"></span> PAINEL PROFISSIONAL
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="paginainicialprofissional.html">Painel</a>
+            <a href="#" class="active">Solicitações</a>
+            <a href="#">Agenda</a>
+            <a href="#">Pagamentos</a>
+            <a href="#">Mensagens</a>
+            <a href="#">Pacientes</a>
+        </nav>
+
+        <div class="nav-right">
+            <img src="img/greybell.png">
+            <div class="divider"></div>
+            <div class="user-profile">
+                <div class="user-info">
+                    <span class="user-name">Ana Paula de Sousa</span>
+                    <span class="user-role">Enfermeira</span>
+                </div>
+                <div class="user-avatar" style="background: var(--cor-muito-forte)">AP</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <header class="page-header">
+            <h1>Solicitações</h1>
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab active">Pendentes</button>
+                    <button class="tab">Aceitas</button>
+                    <button class="tab">Recusadas</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <section class="requests-list">
+                
+                <article class="request-card">
+                    <div class="card-header">
+                        <div class="patient-info">
+                            <div class="avatar" style="background: var(--cor-muito-forte)">AP</div>
+                            <div>
+                                <h2>Ana Paula de Sousa</h2>
+                                <span class="time-elapsed">Há 12 minutos</span>
+                            </div>
+                        </div>
+                        <div class="price">R$90</div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="info-row">
+                            <p>Curativo pós cirúrgico</p>
+                        </div>
+                        <div class="info-row">
+                            <p class="text-muted">Hoje, 18:00</p>
+                        </div>
+                        <div class="info-row">
+                            <p class="text-muted">Rua Alfredo Pacheco - Centro</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-notes">
+                        <p><strong>Observações do paciente:</strong> <span class="text-muted">Pós operatório de cesariana realizado há 3 dias</span></p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-accept">Aceitar</button>
+                        <button class="btn btn-action">Recusar</button>
+                        <button class="btn btn-icon"><img src="img/message.png" height="30px"></button>
+                        <button class="btn btn-icon"><img src="img/download.png" height="25px"></button>
+                    </div>
+                </article>
+
+                <article class="request-card">
+                    <div class="card-header">
+                        <div class="patient-info">
+                            <div class="avatar" style="background: #FF0000">JO</div>
+                            <div>
+                                <h2>João Oliveira</h2>
+                                <span class="time-elapsed">Há 34 minutos</span>
+                            </div>
+                        </div>
+                        <div class="price">R$75</div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="info-row">
+                            <p>Administração de medicação</p>
+                        </div>
+                        <div class="info-row">
+                            <p class="text-muted">Amanhã, 14:00</p>
+                        </div>
+                        <div class="info-row">
+                            <p class="text-muted">Rua Afonso Solano - Manguinha</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-notes">
+                        <p><strong>Observações do paciente:</strong> <span class="text-muted">Sensibilidade a certos medicamentos</span></p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-accept">Aceitar</button>
+                        <button class="btn btn-action">Recusar</button>
+                        <button class="btn btn-icon"><img src="img/message.png" height="30px"></button>
+                        <button class="btn btn-icon"><img src="img/download.png" height="25px"></button>
+                    </div>
+                </article>
+
+            </section>
+
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>Dicas de respostas</h3>
+                    <ul class="tips-list">
+                        <li>
+                            <p>Responda em até 30 minutos para aumentar sua taxa de aceitação.</p>
+                        </li>
+                        <li>
+                            <p>Use o chat para tirar dúvidas com os pacientes.</p>
+                        </li>
+                        <li>
+                            <p>Todos os pacientes têm endereço e identidade verificados.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget availability-widget">
+                    <div class="availability-header">
+                        <h3>Disponibilidade</h3>
+                    </div>
+                    <div class="toggle-row">
+                        <div>
+                            <h4>Receber novas solicitações</h4>
+                            <p class="text-muted small">Você está disponível</p>
+                        </div>
+                        <div class="toggle-switch"></div>
+                    </div>
+                    <button class="btn-config">Configurar horários</button>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

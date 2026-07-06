@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Panel</title>
+    <link rel="stylesheet" href="css/agendaprofissional.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo-area">
+            <img src="img/logonome-medhome.png" height="75px" alt="Logo" class="logo">
+            <span class="badge">PAINEL PROFISSIONAL</span>
+        </div>
+        <nav class="main-nav">
+            <a href="#">Painel</a>
+            <a href="#" class="active">Agenda</a>
+            <a href="#">Solicitações</a>
+            <a href="#">Pagamentos</a>
+            <a href="#">Mensagens</a>
+            <a href="#">Pacientes</a>
+        </nav>
+        <div class="user-profile">
+            <div class="avatar-container">
+                <div class="avatar-circle">AP</div>
+            </div>
+            <div class="user-info">
+                <span class="user-name">Ana Paula de Sousa</span>
+                <span class="user-role">Enfermeira</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="agenda-container">
+            <div class="agenda-header">
+                <h2>Agenda</h2>
+                <div class="agenda-controls">
+                    <button class="date-range">16 - 22 de junho</button>
+                    <div class="view-toggles">
+                        <button class="active">Semana</button>
+                        <button>Mês</button>
+                    </div>
+                    <button class="btn-primary">Bloquear horário</button>
+                </div>
+            </div>
+
+            <div class="calendar">
+                <div class="calendar-days-header">
+                    <div class="time-spacer"></div>
+                    <div class="day-col"><span>SEG</span><strong>15</strong></div>
+                    <div class="day-col"><span>TER</span><strong>16</strong></div>
+                    <div class="day-col"><span>QUA</span><strong>17</strong></div>
+                    <div class="day-col"><span>QUI</span><strong>18</strong></div>
+                    <div class="day-col"><span>SEX</span><strong>19</strong></div>
+                    <div class="day-col"><span>SÁB</span><strong>20</strong></div>
+                    <div class="day-col"><span>DOM</span><strong>21</strong></div>
+                </div>
+                
+                <div class="calendar-body">
+                    <div class="times-col">
+                        <div class="time-slot">8:00</div>
+                        <div class="time-slot">9:00</div>
+                        <div class="time-slot">10:00</div>
+                        <div class="time-slot">11:00</div>
+                        <div class="time-slot">12:00</div>
+                        <div class="time-slot">13:00</div>
+                        <div class="time-slot">14:00</div>
+                        <div class="time-slot">15:00</div>
+                        <div class="time-slot">16:00</div>
+                        <div class="time-slot">17:00</div>
+                        <div class="time-slot">18:00</div>
+                        <div class="time-slot">19:00</div>
+                        <div class="time-slot">20:00</div>
+                    </div>
+                    
+                    <div class="day-slots">
+                        <div class="day-col-grid"></div>
+                        <div class="day-col-grid"></div>
+                        <div class="day-col-grid"></div>
+                        <div class="day-col-grid"></div>
+                        <div class="day-col-grid relative">
+                            <div class="appointment-card">
+                                <div class="appointment-strip"></div>
+                                <div class="appointment-content">
+                                    <div class="patient-avatar">AS</div>
+                                    <div class="patient-details">
+                                        <span class="patient-name">Ademir de Souza</span>
+                                        <span class="appointment-time">09:00 - 11:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="day-col-grid"></div>
+                        <div class="day-col-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <h3 class="sidebar-title">RESUMO DA SEMANA</h3>
+            <div class="summary-card">
+                <div class="summary-item">
+                    <span class="summary-label">Atendimentos</span>
+                    <span class="summary-value">5</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Horas agendadas</span>
+                    <span class="summary-value">8h</span>
+                </div>
+            </div>
+
+            <h3 class="sidebar-title">Disponibilidade</h3>
+            <div class="summary-card outline-blue">
+                <a href="#" class="link-blue">Configurar disponibilidade</a>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
