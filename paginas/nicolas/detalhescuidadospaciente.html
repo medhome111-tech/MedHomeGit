@@ -4,217 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedHome | Paciente</title>
-
-    <link rel="stylesheet" href="css/detalhescuidadospaciente.css">
-
+    <title>Detalhes do Paciente - MedHome</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Link referenciando o mesmo padrão de estilo principal -->
+    <link rel="stylesheet" href="css/inicialprofissional.css">
 </head>
 
 <body>
 
-    <header>
-
-        <div class="header-left">
-
-            <div class="logo">
-                <a href="../alan/paginainicialprofissional.html"><img src="img/logo medhome com nome .png" alt="MedHome"></a>
-            </div>
-
-            <div class="painel-profissional">
-                <span class="status-online"></span>
-                <p>PAINEL PROFISSIONAL</p>
-            </div>
-
+    <!-- CABEÇALHO PADRÃO -->
+    <header class="header">
+        <div class="logo">
+            <a href="../alan/paginainicialprofissional.html">
+                <img src="img/logo medhome com nome .png" alt="Logo">
+            </a>
         </div>
+        
+     <nav class="nav-menu">
 
-        <nav>
-            <a href="../alan/paginainicialprofissional.html">Painel</a>
-            <a href="../alan/solicitacoesprofissional.html">Solicitações</a>
-            <a href="../alan/agendaprofissional.html">Agenda</a>
-            <a href="">Pagamentos</a>
-            <a href="chatcompaciente.html">Mensagens</a>
-            <a href="" class="ativo">Pacientes</a>
+            <a href="inicialprofissional.html" class="active">Painel</a>
+
+            <a href="../alvaro/solicitacoes.html">Solicitações</a>
+
+            <a href="../alvaro/agendaprofissional.html">Agenda</a>
+
+            <a href="pagamentoscliente.html">Pagamentos</a>
+
+            <a href="../alvaro/mensagens.html" class="nav-mensagens">Mensagens <span class="badge">2</span></a>
+
+            <a href="../alvaro/pacientes.html">Pacientes</a>
+
         </nav>
 
-        <div class="header-right">
-
-            <button class="notificacao">
-                <img src="img/sino.png" alt="Notificação">
-            </button>
-
-            <div class="perfil">
-
-                <div class="avatar">
-                    AP
-                </div>
-
-                <div>
-                    <h3>Ana Paula de Sousa</h3>
-                    <span>Enfermeira</span>
-                </div>
-
+        <div class="perfil-header">
+            <div class="perfil-info">
+                <span class="nome">Ana Paula de Sousa</span>
+                <span class="cargo">Enfermeira</span>
             </div>
-
+            <div class="avatar-header">AP</div>
         </div>
-
     </header>
 
-    <main>
-
-        <section class="paciente-topo">
-
-            <div class="paciente-info">
-
-                <div class="foto-paciente">
-                    GS
-                </div>
-
+    <main class="container">
+        
+        <!-- INFORMAÇÕES DO PACIENTE NO TOPO -->
+        <section class="top-section">
+            <div class="saudacao" style="display: flex; gap: 20px; align-items: center;">
+                <div class="avatar-header" style="width: 70px; height: 70px; font-size: 28px; background-color: #10B981;">AS</div>
                 <div>
-
+                    <span class="tag-painel" style="background-color: #D1FAE5; color: #065F46;">EM TRATAMENTO</span>
                     <h1>Ademir de Souza</h1>
-
-                    <p>
+                    <p class="boa-tarde" style="margin-top: 5px; text-transform: none;">
                         62 anos - Rua das Acácias, 240 - Centro, Floriano
                     </p>
-
-                    <span class="status-paciente">
-                        Em tratamento
-                    </span>
-
                 </div>
-
             </div>
-
-            <a href="chatcompaciente.html">
-                <button class="mensagem-btn">
-                    <img src="img/Message circle.png" alt="">
-                    Enviar mensagem
-                </button>
-            </a>
-
+            
+            <div class="status-disponibilidade">
+                <a href="chatcompaciente.html" style="text-decoration: none;">
+                    <button class="btn btn-aceitar" style="display: flex; align-items: center; gap: 8px;">
+                        <img src="img/Message circle.png" alt="" style="width: 18px; filter: brightness(0) invert(1);"> 
+                        Enviar mensagem
+                    </button>
+                </a>
+            </div>
         </section>
 
-        <section class="cards-duplos">
+        <!-- DADOS CLÍNICOS EM FORMATO DE KPI GRID -->
+        <div class="secao-titulo mt-40" style="margin-top: 20px; margin-bottom: 15px;">
+            <h2>Dados Clínicos</h2>
+        </div>
 
-            <div class="card progresso">
-
-                <h2>PROGRESSO DO PLANO</h2>
-
-                <div class="progresso-topo">
-
-                    <p>
-                        <strong>3</strong> de 5 visitas
-                    </p>
-
-                    <span>
-                        60%
-                    </span>
-
+        <section class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-icon"><img src="img/ouvidomedico.png" alt="" style="width: 24px;"></div>
+                <div class="kpi-dados">
+                    <p>CONDIÇÃO</p>
+                    <h2 style="font-size: 1.1rem; margin-top: 5px;">Idade avançada</h2>
                 </div>
-
-                <div class="barra">
-                    <div></div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon"><img src="img/cuidado.png" alt="" style="width: 24px;"></div>
+                <div class="kpi-dados">
+                    <p>PLANO DE CUIDADO</p>
+                    <h2 style="font-size: 1.1rem; margin-top: 5px;">Troca de curativo (5 visitas)</h2>
                 </div>
-
             </div>
-
-            <div class="card contato">
-
-                <h2>CONTATO</h2>
-
-                <p>
-                    (89) 99999-9999
-                </p>
-
-                <p>
-                    <span>Emergência:</span> Carlos Souza
-                </p>
-
+            <div class="kpi-card">
+                <div class="kpi-icon"><img src="img/prancheta.png" alt="" style="width: 24px;"></div>
+                <div class="kpi-dados">
+                    <p>ALERGIAS</p>
+                    <h2 style="font-size: 1.1rem; margin-top: 5px;">Nenhuma conhecida</h2>
+                </div>
             </div>
-
+            <div class="kpi-card">
+                <div class="kpi-icon"><img src="img/pilula.png" alt="" style="width: 24px;"></div>
+                <div class="kpi-dados">
+                    <p>MEDICAÇÃO EM USO</p>
+                    <h2 style="font-size: 1.1rem; margin-top: 5px;">Dipirona, Ibuprofeno</h2>
+                </div>
+            </div>
         </section>
 
-        <section class="card dados-clinicos">
-
-            <h2>DADOS CLÍNICOS</h2>
-
-            <div class="dados-grid">
-
-                <div class="dado">
-
-                    <img src="img/ouvidomedico.png" alt="">
-
-                    <div>
-                        <p>Condição</p>
-                        <strong>Idade avançada</strong>
-                    </div>
-
+        <!-- GRID DE CONTEÚDO (ESQUERDA E DIREITA) -->
+        <div class="content-grid mt-40" style="margin-top: 40px;">
+            
+            <!-- COLUNA ESQUERDA: DOCUMENTOS -->
+            <div class="col-esquerda">
+                
+                <div class="secao-titulo">
+                    <h2>Documentos Anexados</h2>
                 </div>
 
-                <div class="dado">
-
-                    <img src="img/cuidado.png" alt="">
-
-                    <div>
-                        <p>Plano de cuidado</p>
-                        <strong>Troca de curativo, 5 visitas</strong>
+                <div class="card-simples">
+                    <div class="paciente-info">
+                        <div class="avatar blue" style="background: transparent;">
+                            <img src="img/papel.png" alt="" style="width: 24px;">
+                        </div>
+                        <div>
+                            <h3>Laudo de alta hospitalar.pdf</h3>
+                            <p class="msg-preview">Adicionado em 02 de Julho de 2026</p>
+                        </div>
                     </div>
-
+                    <button class="btn btn-aceitar" style="padding: 8px 16px; font-size: 0.9rem;">Abrir</button>
                 </div>
-
-                <div class="dado">
-
-                    <img src="img/prancheta.png" alt="">
-
-                    <div>
-                        <p>Alergias</p>
-                        <strong>Nenhuma conhecida</strong>
+                
+                <div class="card-simples">
+                    <div class="paciente-info">
+                        <div class="avatar blue" style="background: transparent;">
+                            <img src="img/papel.png" alt="" style="width: 24px;">
+                        </div>
+                        <div>
+                            <h3>Prescrição médica.pdf</h3>
+                            <p class="msg-preview">Adicionado em 02 de Julho de 2026</p>
+                        </div>
                     </div>
-
-                </div>
-
-                <div class="dado">
-
-                    <img src="img/pilula.png" alt="">
-
-                    <div>
-                        <p>Medicação em uso</p>
-                        <strong>Dipirona, ibuprofeno 600mg</strong>
-                    </div>
-
+                    <button class="btn btn-aceitar" style="padding: 8px 16px; font-size: 0.9rem;">Abrir</button>
                 </div>
 
             </div>
 
-        </section>
-
-        <section class="card documentos">
-
-            <h2>DOCUMENTOS</h2>
-
-            <div class="documento">
-
-                <div class="documento-icone">
-                    <img src="img/papel.png" alt="">
+            <!-- COLUNA DIREITA: PROGRESSO E CONTATO -->
+            <div class="col-direita">
+                
+                <!-- Progresso do Plano -->
+                <div class="secao-titulo">
+                    <h2>Progresso do Plano</h2>
                 </div>
 
-                <p>Laudo de alta hospitalar.pdf</p>
-
-            </div>
-
-            <div class="documento">
-
-                <div class="documento-icone">
-                    <img src="img/papel.png" alt="">
+                <div class="card-agenda" style="margin-bottom: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span style="font-size: 1rem; color: #4b5563;"><strong>3</strong> de 5 visitas concluídas</span>
+                        <span class="badge" style="background-color: #3B82F6; color: white; padding: 4px 10px;">60%</span>
+                    </div>
+                    <!-- Barra de progresso -->
+                    <div style="width: 100%; height: 10px; background-color: #E5E7EB; border-radius: 10px; overflow: hidden;">
+                        <div style="width: 60%; height: 100%; background-color: #3B82F6; border-radius: 10px;"></div>
+                    </div>
                 </div>
 
-                <p>Prescrição médica.pdf</p>
+                <!-- Contato -->
+                <div class="secao-titulo">
+                    <h2>Contato</h2>
+                </div>
+
+                <div class="card-agenda">
+                    <div class="item-agenda border-blue bg-blue-light">
+                        <div class="horario">Telefone do Paciente</div>
+                        <h4>(89) 99999-9999</h4>
+                    </div>
+
+                    <div class="item-agenda border-red" style="background-color: #FEF2F2;">
+                        <div class="horario" style="color: #EF4444;">Contato de Emergência</div>
+                        <h4>Carlos Souza</h4>
+                        <p>Filho(a) / Responsável</p>
+                    </div>
+                </div>
 
             </div>
-
-        </section>
+        </div>
 
     </main>
 
